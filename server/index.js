@@ -14,12 +14,12 @@ const port = process.env.PORT; // Change this to your desired port number
 
 app.use(express.json());
 
-app.use("/api/user", userRouter);
+app.use("/api/users", userRouter);
 
 
 app.use("/api/products",productRouter);
 
-app.use("/api/post", postRouter)
+app.use("/api/posts", postRouter)
 
 
 // Define a route
