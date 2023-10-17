@@ -3,12 +3,17 @@ const app = express();
 require('dotenv').config()
 // require('./database/index')
 const userRouter = require('./routers/user.router')
+
+const productRouter = require('./routers/product.router')
 const port = process.env.PORT; // Change this to your desired port number
 
 
 app.use(express.json());
 
 app.use("/api/user", userRouter);
+
+app.use("/api/products",productRouter);
+
 // Define a route
 app.get('/', (req, res) => {
     res.send('Hello, World!');
