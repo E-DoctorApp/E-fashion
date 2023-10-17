@@ -47,6 +47,7 @@ CREATE TABLE `Message` (
 CREATE TABLE `Post` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `image` VARCHAR(191) NULL,
+    `content` VARCHAR(191) NULL,
     `numLikes` INTEGER NOT NULL,
     `numShares` INTEGER NOT NULL,
     `userId` INTEGER NOT NULL,
