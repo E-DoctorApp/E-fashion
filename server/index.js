@@ -8,7 +8,7 @@ const userRouter = require('./routers/user.router')
 const productRouter = require('./routers/product.router')
 
 const postRouter = require('./routers/post.router')
-
+const wishlistRouter = require('./routers/wishList.router')
 const port = process.env.PORT; // Change this to your desired port number
 
 
@@ -17,10 +17,10 @@ app.use(express.json());
 app.use("/api/users", userRouter);
 
 
-app.use("/api/products",productRouter);
+app.use("/api/products", productRouter);
 
 app.use("/api/posts", postRouter)
-
+app.use("/api/wishlists", wishlistRouter);
 
 // Define a route
 app.get('/', (req, res) => {
