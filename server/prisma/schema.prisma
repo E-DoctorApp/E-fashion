@@ -42,7 +42,6 @@ model userChatRoom {
   userId     Int
   chatRoom   ChatRoom @relation(fields: [chatRoomId], references: [id])
   chatRoomId Int
-
   @@unique([userId, chatRoomId])
 }
 
