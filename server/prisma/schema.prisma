@@ -66,6 +66,7 @@ model Post {
   id        Int       @id @default(autoincrement())
   User      User      @relation(fields: [userId], references: [id])
   image     String?
+  content   String?
   numLikes  Int
   numShares Int
   userId    Int
