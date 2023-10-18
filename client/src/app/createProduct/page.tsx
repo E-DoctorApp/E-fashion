@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { useDispatch } from 'react-redux';
 // import { createProduct,addProduct  } from '../store/CreateProductSlice';
 // import Modal from 'react-modal';
@@ -7,6 +7,9 @@ import  '../../styles/CreateProduct.css';
 import NavBar from '@/componnents/NavBar';
 import Footer from '@/componnents/Footer';
 import axios from 'axios';
+import { AppDispatch, RootState } from '@/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUser } from '@/store/signinReduser';
 // import { AppDispatch } from '../store';
 
 
@@ -25,15 +28,21 @@ interface User {
 }
 
 const CreateProduct = () => {
-//   const dispatch = useDispatch<AppDispatch>()
+  const dispatch = useDispatch<AppDispatch>()
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
+  const [quantity, setQuantity] = useState('');
   const [category, setCategory] = useState('');
   const [typeProd, setTypeProd] = useState('');
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const user: User = JSON.parse(localStorage.getItem('user') || '{}');
+
 //   let navigate = useNavigate()
+useEffect(() => {
+  dispatch(getUser())
+},[])
+
+const user:any = useSelector((state:RootState)=>state.currentUser.user)
+console.log(user);
 
   const profileUpload= async (e:any)=>{
     const formData=new FormData()
@@ -50,7 +59,15 @@ const CreateProduct = () => {
     
       }
 
-
+      const handleAddProduct = async (body:any)=>{
+        try {
+          const res =  await axios.post("http://localhost:5000/api/products/add",body)
+          console.log(res.data);
+          
+        } catch (error) {
+          console.log(error);
+        }
+      }
  
 
   return (
@@ -65,10 +82,11 @@ const CreateProduct = () => {
              <option value="other">Other</option>
            </select>
            <input className="form-input" placeholder='Price' type="text" value={price} onChange={(event) => setPrice(event.target.value)} />
-    <select id='select' className="form-input" value={category} onChange={(event) => setCategory(event.target.value)}>
-             <option value="">Select Product Type</option>
-             <option value="men">Product</option>
-             <option value="women">NFT</option>
+           <input className="form-input" placeholder='Quantity' type="text" value={quantity} onChange={(event) => setQuantity(event.target.value)} />
+    <select id='select' className="form-input" value={typeProd} onChange={(event) => setTypeProd(event.target.value)}>
+             <option  >Select Product Type</option>
+             <option value="Normal">Product</option>
+             <option value="NFT">NFT</option>
            </select>
            <div>
       <label htmlFor="inputTag">
@@ -77,7 +95,21 @@ const CreateProduct = () => {
         <span id="imageName">{image}</span>
       </label>
     </div>
-             <button className="form-button" type="submit">Create Product</button>
+             <button className="form-button" type="submit" 
+             onClick={(e)=>{
+              e.preventDefault()
+              handleAddProduct({
+                name: name,
+                price: +price,
+                image: image,
+                quantity: +quantity,
+                // categoryId: 1,
+                type: typeProd,
+                userId: user.id,
+                status: "OnStock"
+              })
+             }} 
+             >Create Product</button>
     </div>
   );
 };
