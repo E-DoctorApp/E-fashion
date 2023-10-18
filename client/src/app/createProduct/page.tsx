@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import  '../../styles/CreateProduct.css';
 import NavBar from '@/componnents/NavBar';
 import Footer from '@/componnents/Footer';
+import axios from 'axios';
 // import { AppDispatch } from '../store';
 
 
@@ -34,30 +35,20 @@ const CreateProduct = () => {
   const user: User = JSON.parse(localStorage.getItem('user') || '{}');
 //   let navigate = useNavigate()
 
-//   const profileUpload= async (e:any)=>{
-//     const formData=new FormData()
-//     formData.append("file",e.target.files[0])
-//     formData.append("upload_preset","oztadvnr")
-//     await axios.post("https://api.cloudinary.com/v1_1/dl4qexes8/upload",formData).then((response)=>{
-//     setImage(response.data["secure_url"])
+  const profileUpload= async (e:any)=>{
+    const formData=new FormData()
+    formData.append("file",e.target.files[0])
+    formData.append("upload_preset","oztadvnr")
+    await axios.post("https://api.cloudinary.com/v1_1/dl4qexes8/upload",formData).then((response)=>{
+      console.log(response.data["secure_url"]);
+    setImage(response.data["secure_url"])
 
     
-//     }).catch((error)=>{
-//       throw error
-//     })
+    }).catch((error)=>{
+      throw error
+    })
     
-//       }
-//   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-//     event.preventDefault();
-//     const parsedPrice = parseFloat(price);
-//     const productType = user.role === 'fashionista' ? 'NFT' : 'product';
-//     const formData = { name, price: parsedPrice, image, userId: user.id, category, typeProd: productType };
-//     if ((user.role === 'brand' && productType === 'product') || (user.role === 'fashionista' && productType === 'NFT')) {
-//       dispatch(addProduct(formData));
-//     } else {  
-//       alert(`You are not authorized to add products of type ${productType}.`);
-//     }
-//   };
+      }
 
 
  
@@ -82,7 +73,7 @@ const CreateProduct = () => {
            <div>
       <label htmlFor="inputTag">
         Select Image <br/>
-        <input id="inputTag" type="file" onChange={(e)=>setImage(e.target.value)} />
+        <input id="inputTag" type="file" onChange={(e)=>profileUpload(e)} />
         <span id="imageName">{image}</span>
       </label>
     </div>
