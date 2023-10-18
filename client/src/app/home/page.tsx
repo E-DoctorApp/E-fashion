@@ -1,14 +1,14 @@
 "use client"
 import React, { FunctionComponent, useState, useEffect } from 'react'
-// import '../styles/Home.scss'
-import adidas from './imgs/adidas.png'
-import puma from './imgs/puma.png'
-import lacoste from './imgs/lacoste.png'
-// import FashionThatSpeaks from './imgs/FashionThatSpeaks.png'
-// import noGasFees from './imgs/noGasFees.png'
-// import carbonNeturalNFTs from './imgs/carbonNeturalNFTs.png'
-// import fastNEasyTrans from './imgs/fastNEasyTrans.png'
-// import allImgs from './imgs/allImgs.png'
+import '../../styles/Home.css'
+import adidas from '../../../public/Assests/images/adidas.png'
+import puma from '../../../public/Assests/images/puma.png'
+import lacoste from '../../../public/Assests/images/lacoste.png'
+import FashionThatSpeaks from '../../../public/Assests/images/FashionThatSpeaks.png'
+import noGasFees from '../../../public/Assests/images/noGasFees.png'
+import carbonNeturalNFTs from '../../../public/Assests/images/carbonNeturalNFTs.png'
+import fastNEasyTrans from '../../../public/Assests/images/fastNEasyTrans.png'
+import allImgs from '../../../public/Assests/images/allImgs.png'
 import Image from 'next/image'
 
 // import ClientCard from '../components/BrandCard'
@@ -17,11 +17,12 @@ import Image from 'next/image'
 
 // import { data } from '../torbagaDummyData' //this line will be deleted when we import the real data from redux's store
 // import ProductCard from '../components/NewTrending'
-// import NavBar from '../components/NavBar'
-// import Footer from '../components/Footer'
+import Footer from '../../componnents/Footer'
 import { useSelector, useDispatch } from 'react-redux'
 import { AppDispatch } from '@/store'
 import { getUser } from '@/store/signinReduser'
+import Link from 'next/link'
+import NavBar from '@/componnents/NavBar'
 // import { RootState, AppDispatch } from '../store'
 // import { fetchProducts } from '../components/ProductData/productData'
 
@@ -101,7 +102,7 @@ const Home = () => {
 
 
     const [brands, setBrands] = useState<User[]>([]);
-   
+
     // useEffect(() => {
     //     axios.get<User[]>("http://localhost:5000/api/user/getUserByRole/brand").then((response) => {
     //         const users = response.data.map((user) => ({
@@ -117,7 +118,7 @@ const Home = () => {
 
     return (
         <div>
-            {/* <NavBar /> */}
+            <NavBar />
 
             <div>
                 <div id='homePage'>
@@ -163,18 +164,18 @@ const Home = () => {
                                 </div>
                             </span>
                             <span className='rightSection'>
-                                {/* <img src={allImgs} alt="" /> */}
+                                <Image src={allImgs} alt="" />
                             </span>
                         </span>
                         <div className='logos'>
                             <span>
-                                {/* <Link to='https://www.adidas.fr/'><img src={adidas} alt="adidas" /></Link> */}
+                                <Image src={adidas} alt="adidas" />
                             </span>
                             <span>
-                                {/* <Link to='https://eu.puma.com/fr/fr/home'><img src={puma} alt="puma" /></Link> */}
+                                <Image src={puma} alt="puma" />
                             </span>
                             <span>
-                                {/* <Link to='https://www.lacoste.com/fr/'><img src={lacoste} alt="lacoste" /></Link> */}
+                                <Image src={lacoste} alt="lacoste" />
                             </span>
                         </div>
                         <div className='aboutUs'>
@@ -186,7 +187,7 @@ const Home = () => {
                         <div className='fashionSpeaks'>
                             <span className='imgContainer'>
                                 <span>
-                                    {/* <Image src={FashionThatSpeaks} alt="" /> */}
+                                    <Image src={FashionThatSpeaks} alt="" />
                                 </span>
                             </span>
                             <span className='description'>
@@ -206,15 +207,15 @@ const Home = () => {
                             </span>
                             <span className='complexThings'>
                                 <span>
-                                    {/* <Image src={noGasFees} alt="" /> */}
+                                    <Image src={noGasFees} alt="" />
                                     <p className='lightParag' >No Gas Fees</p>
                                 </span>
                                 <span>
-                                    {/* <Image src={carbonNeturalNFTs} alt="" /> */}
+                                    <Image src={carbonNeturalNFTs} alt="" />
                                     <p className='lightParag' >Carbon Netural NFTs</p>
                                 </span>
                                 <span>
-                                    {/* <Image src={fastNEasyTrans} alt="" /> */}
+                                    <Image src={fastNEasyTrans} alt="" />
                                     <p className='lightParag' >Fast And Easy Transactions</p>
                                 </span>
                             </span>
@@ -287,7 +288,7 @@ const Home = () => {
 
                 </div>
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
