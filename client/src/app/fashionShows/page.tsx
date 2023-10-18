@@ -5,8 +5,8 @@ import '../../styles/FashionShow.module.css'
 
 // styles/fashionShows.css'
 // import NavBar from "./NavBar";
-import rect1 from '../images/Rectangle 1918.png'
-import vec3 from '../images/aiony-haust-3TLl_97HNJo-unsplash (1) 1.png'
+// import rect1 from '../../../public/Assests/images/Rectangle 1918.png'
+// import vec3 from '../../../public/Assests/images/aiony-haust-3TLl_97HNJo-unsplash (1) 1.png'
 // import Footer from "./Footer";
 const FashionShows = () => {
   return (
