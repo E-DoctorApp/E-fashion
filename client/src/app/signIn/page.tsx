@@ -1,16 +1,15 @@
 "use client"
 import React, { FunctionComponent, useCallback, useState, ChangeEvent } from "react";
+import Image from "next/image";
 import img from "../../../public/Assests/images/imageboy.png"
 import facebook from "../../../public/Assests/images/facebook.png"
 import apple from "../../../public/Assests/images/apple.png"
 import google from "../../../public/Assests/images/google.png"
 import styles from "../../styles/SignIn.module.css";
-import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store";
 import { signinUser } from "../../store/signinReduser"
 import { useRouter } from "next/navigation";
-// import SignUp from "./SignUp";
 
 
 interface FormData {
@@ -25,7 +24,7 @@ const SignIn: FunctionComponent = () => {
   //   let navigate = useNavigate()
 
   const onNewUserCreateClick = () => {
-    // navigate("/signUp" )
+    router.push("/signUp")
   }
 
   const [formData, setFormData] = useState<FormData>({
@@ -54,7 +53,6 @@ const SignIn: FunctionComponent = () => {
 
     dispatch(signinUser({ ...formData}));
     router.push("/home")
-    // navigate("/home" )
   }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -115,7 +113,7 @@ const SignIn: FunctionComponent = () => {
         </div>
         <div className={styles.group_Div}>
           <div className={styles.group_Child1} />
-          {/* <img className={styles.vector_Icon} alt="" src={apple} /> */}
+          <Image className={styles.vector_Icon} alt="" src={apple} />
           <div className={styles.continue_WithFacebook}>Continue With Apple</div>
         </div>
       </div>
