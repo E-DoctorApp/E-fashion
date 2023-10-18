@@ -6,6 +6,7 @@ import "../styles/About.css"
 import "../styles/brandDropCard.css"
 import "../styles/BrandPage.css"
 import "../styles/BrandStorePage.css"
+// import "../styles/drops.css"
 
 
 

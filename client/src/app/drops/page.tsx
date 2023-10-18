@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import '../styles/drops.css'
+import '../../styles/drops.css'
 // import BrandDropCard from './BrandDropCard'
 // import NavBar from './NavBar'
 // import Footer from './Footer'
