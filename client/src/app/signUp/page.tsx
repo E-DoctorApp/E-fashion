@@ -109,7 +109,7 @@ const SignUp: FunctionComponent = () => {
     // Dispatch signupUser action with the updated formData
 
     dispatch(signupUser({ firstName, lastName, password, type, email, dateOfBirth: formattedDateOfBirth }));
-    router.push("/signIn")
+    router.push("/signIn")      
   };
 
 
@@ -169,7 +169,7 @@ const SignUp: FunctionComponent = () => {
               <option >Year</option>
               {renderOptions(years.map(String))}
             </select>
-            <select className="--role" name="role" value={formData.type} onChange={handleChange} >
+            <select className="--role" name="type" value={formData.type} onChange={handleChange} >
               <option >Role</option>
               {renderOptions(Object.values(["regular", "brand", "fashionista"]))}
             </select>
