@@ -1,58 +1,45 @@
-
 .header {
     height: 101px;
     position: relative;
-    width: 1440px;
+    width: 100% !important;
 }
 
-.header .text-wrapper {
+.text-wrapper {
     color: #6c5dd3;
     font-family: "Roboto-Bold", Helvetica;
     font-size: 36px;
     font-weight: 700;
-    left: 51px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
-    top: 27px;
     white-space: nowrap;
 }
 
-.header .div {
+.div {
     color: #ffffff;
     font-family: "SF Pro Display-Semibold", Helvetica;
     font-size: 16px;
     font-weight: 400;
-    left: 570px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
-    top: 40px;
     white-space: nowrap;
 }
 
-.header .text-wrapper-2 {
+.text-wrapper-2 {
     color: #ffffff;
     font-family: "SF Pro Display-Semibold", Helvetica;
     font-size: 16px;
     font-weight: 400;
-    left: 800px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
-    top: 40px;
     white-space: nowrap;
 }
 
-.header .search-bar {
+.search-bar {
     height: 48px;
-    left: 172px;
-    position: absolute;
-    top: 26px;
     width: 360px;
 }
 
-.header .overlap-group {
+.overlap-group {
     border: 0.5px solid;
     border-color: #ffffff80;
     border-radius: 184px;
@@ -61,15 +48,15 @@
     width: 358px;
 }
 
-.header .vector {
+/* .vector {
     height: 21px;
     left: 14px;
     position: absolute;
     top: 14px;
     width: 21px;
-}
+} */
 
-.header .p {
+ .p {
     color: #ffffff;
     font-family: "SF Pro Display-Regular", Helvetica;
     font-size: 14px;
@@ -81,14 +68,7 @@
     top: 16px;
 }
 
-.header .ellipse {
-    height: 44px;
-    left: 1364px;
-    object-fit: cover;
-    position: absolute;
-    top: 29px;
-    width: 44px;
-}
+
 
 .header .img {
     height: 9px;
@@ -192,6 +172,7 @@
     white-space: nowrap;
     width: fit-content;
 }
+
 /* search */
 .inputBox_container {
     display: flex;
@@ -203,15 +184,15 @@
     background-color: #5c6370;
     border-radius: 0.8em;
     overflow: hidden;
-  }
-  
-  .search_icon {
+}
+
+.search_icon {
     height: 1em;
     padding: 0 0.5em 0 0.8em;
     fill: #abb2bf;
-  }
-  
-  .inputBox {
+}
+
+.inputBox {
     background-color: transparent;
     color: #ffffff;
     outline: none;
@@ -219,11 +200,12 @@
     border: 0;
     padding: 0.5em 1.5em 0.5em 0;
     font-size: 1em;
-  }
-  
-  ::placeholder {
+}
+
+::placeholder {
     color: #abb2bf;
-  }
+}
+
 /* dropDown */
 .drop-down-open {
     background-color: #212749;
