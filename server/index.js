@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 require('dotenv').config()
 // require('./database/index')
@@ -14,7 +15,7 @@ const categoryRouter = require("./routers/category.router")
 const wishlistRouter = require('./routers/wishList.router')
 const port = process.env.PORT; // Change this to your desired port number
 
-
+app.use(cors())
 app.use(express.json());
 
 app.use("/api/users", userRouter);
