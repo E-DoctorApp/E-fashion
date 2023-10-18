@@ -4,6 +4,9 @@ body{
   align-items: center;
   height: 100vh;
 }
+.create-product{
+  width: 100%;
+}
 .create-product-container {
     height: 30vw;
     width: 40%;
@@ -36,12 +39,14 @@ body{
 .form-input{
   width: 100%;
   height: 2rem;
-  background-color: transparent ;
+  background-color: rgba(255, 255, 255, 0.221) ;
   border: none;
   box-shadow: none;
   outline: none;
-  /* color: white; */
+  color: rgb(86, 86, 86);
   font-size: 16px;
+  border-radius: 1rem;
+  text-align: center;
 }
 .form-input:hover{
   border-bottom: 1px solid white ;
@@ -54,15 +59,40 @@ body{
   border-radius: 1rem;
   outline:none;
 }
-select {
+#select {
   border: none;
   outline: none;
   scroll-behavior: smooth;
   -webkit-appearance: none;
-  border-radius: 1px;
-
+  border-radius: 1rem;
+  text-align: center;
 }
 
+.form-upload{
+  width: 100%;
+  height: 2rem;
+  background-color:transparent ;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+div{
+  text-align:center;
+  padding:3%;
+  border:thin solid white;
+}
+
+input[type="file"]{
+  display: none;
+}
+
+label{
+  cursor:pointer;
+}
+
+#imageName{
+  color:green;
+}
 
 
 

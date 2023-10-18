@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 // import { createProduct,addProduct  } from '../store/CreateProductSlice';
 // import Modal from 'react-modal';
 import  '../../styles/CreateProduct.css';
+import NavBar from '@/componnents/NavBar';
+import Footer from '@/componnents/Footer';
 // import { AppDispatch } from '../store';
-// import NavBar from './NavBar';
-// import Footer from './Footer';
+
 
 // import axios from 'axios';
 // import { useNavigate } from 'react-router-dom';
@@ -62,45 +63,10 @@ const CreateProduct = () => {
  
 
   return (
-    // <div className="create-product-container">
-    //   <button className="form-button" type="submit" 
-    //   //   onClick={()=>{navigate("/home")}}
-
-    // >Create Product</button>
-    //   {/* <form className="create-product-form" > */}
-    //     <label className="form-label">
-    //       <input className="form-input" placeholder='Name' value={name} onChange={(event) => setName(event.target.value)} />
-    //     </label>
-        
-    //     <label className="form-label">
-    //       <select className="form-input" value={category} onChange={(event) => setCategory(event.target.value)}>
-    //         <option value="">Select a category</option>
-    //         <option value="men">Men</option>
-    //         <option value="women">Women</option>
-    //         <option value="kids">Kids</option>
-    //         <option value="other">Other</option>
-    //       </select>
-    //     </label>
-          
-
-        
-    //     <label className="form-label">
-    //       <input className="form-input" placeholder='Price' type="number" value={price} onChange={(event) => setPrice(event.target.value)} />
-    //     </label>
-
-        
-    //     <label className="form-label">
-    //       <input className="form-input"   type="file" placeholder='Image' 
-    //         // onChange={(e)=>{profileUpload(e)}} 
-    //         />
-    //     </label>
-    //     {/* <Link to='/'> <button className="form-button" type="submit">Create Product</button></Link> */}
-
-    //   {/* </form> */}
-    // </div>
-    <div className='create-product-container'>
+   
+     <div className='create-product-container'>
       <input className="form-input" placeholder='Name' value={name} onChange={(event) => setName(event.target.value)} />
-        <select className="form-input" value={category} onChange={(event) => setCategory(event.target.value)}>
+        <select id='select' className="form-input" value={category} onChange={(event) => setCategory(event.target.value)}>
              <option value="">Select a category</option>
              <option value="men">Men</option>
              <option value="women">Women</option>
@@ -108,7 +74,18 @@ const CreateProduct = () => {
              <option value="other">Other</option>
            </select>
            <input className="form-input" placeholder='Price' type="text" value={price} onChange={(event) => setPrice(event.target.value)} />
-           <input className="form-input"   type="file" placeholder='Image'/>
+    <select id='select' className="form-input" value={category} onChange={(event) => setCategory(event.target.value)}>
+             <option value="">Select Product Type</option>
+             <option value="men">Product</option>
+             <option value="women">NFT</option>
+           </select>
+           <div>
+      <label htmlFor="inputTag">
+        Select Image <br/>
+        <input id="inputTag" type="file" onChange={(e)=>setImage(e.target.value)} />
+        <span id="imageName">{image}</span>
+      </label>
+    </div>
              <button className="form-button" type="submit">Create Product</button>
     </div>
   );
