@@ -397,55 +397,130 @@ main()
               userId: 5, // Replace with the actual user ID
             },
             {
-              image: 'https://example.com/post6_image.jpg',
+              image: 'https://www.diariesofmagazine.com/wp-content/uploads/2018/02/WEB_VAL_8895-e1518892150624.jpg',
               content: 'Hiking in the mountains.',
               numLikes: 25,
               numShares: 7,
               userId: 6, // Replace with the actual user ID
             },
             {
-              image: 'https://example.com/post7_image.jpg',
+              image: 'https://images.moneycontrol.com/static-mcnews/2020/07/online-gaming-1-770x433.jpg?impolicy=website&width=770&height=431',
               content: 'Gaming time!',
               numLikes: 70,
               numShares: 18,
               userId: 7, // Replace with the actual user ID
             },
             {
-              image: 'https://example.com/post8_image.jpg',
+              image: 'https://blog.currentcatalog.com/wp-content/uploads/2018/09/Reading.jpg',
               content: 'Reading a good book.',
               numLikes: 35,
               numShares: 9,
               userId: 8, // Replace with the actual user ID
             },
             {
-              image: 'https://example.com/post9_image.jpg',
+              image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-4tH3pAfPgzHYKU-IQ_hUp5UyiSne7BzQaZSRBRh6sIIO6HOLoN8Ehw6USBauyYCCok&usqp=CAU',
               content: 'Weekend relaxation.',
               numLikes: 45,
               numShares: 11,
               userId: 9, // Replace with the actual user ID
             },
             {
-              image: 'https://example.com/post10_image.jpg',
+              image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0VbSkvj5yjeUXwunxHpPotIj3SRI1vL9fbsCndCz0ueLJkzTvi-DjK-oIRLzb0P9rqXo&usqp=CAU',
               content: 'Artistic expression.',
               numLikes: 55,
               numShares: 13,
               userId: 10, // Replace with the actual user ID
             },
             {
-              image: 'https://example.com/post11_image.jpg',
+              image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNEhjJyN1eHdHKBOQlq8-M7JPizJ2uGFYKU1ttNm0j5iAPME9j-ksYajv1-zF2ox8eauQ&usqp=CAU',
               content: 'Traveling the world.',
               numLikes: 33,
               numShares: 7,
               userId: 11, // Replace with the actual user ID
             },
             {
-              image: 'https://example.com/post12_image.jpg',
+              image: 'https://www.trainheroic.com/wp-content/uploads/2022/12/AdobeStock_308728099-TH-jpg.webp',
               content: 'Fitness goals!',
               numLikes: 75,
               numShares: 20,
               userId: 12, // Replace with the actual user ID
             },
           ];
+          const commentData = [
+            {
+              content: 'Great post!',
+              postId: 1, // Replace with the actual post ID
+              commenter: 1, // Replace with the actual user ID
+            },
+            {
+              content: 'I love the picture!',
+              postId: 1, // Replace with the actual post ID
+              commenter: 2, // Replace with the actual user ID
+            },
+            {
+              content: 'Nice view!',
+              postId: 2, // Replace with the actual post ID
+              commenter: 3, // Replace with the actual user ID
+            },
+            {
+              content: 'Yum, what did you eat?',
+              postId: 4, // Replace with the actual post ID
+              commenter: 4, // Replace with the actual user ID
+            },
+            {
+              content: 'Impressive code!',
+              postId: 5, // Replace with the actual post ID
+              commenter: 5, // Replace with the actual user ID
+            },
+            {
+              content: 'Must have been an amazing hike!',
+              postId: 6, // Replace with the actual post ID
+              commenter: 6, // Replace with the actual user ID
+            },
+            {
+              content: 'What game are you playing?',
+              postId: 7, // Replace with the actual post ID
+              commenter: 7, // Replace with the actual user ID
+            },
+            {
+              content: 'Which book are you reading?',
+              postId: 8, // Replace with the actual post ID
+              commenter: 8, // Replace with the actual user ID
+            },
+            {
+              content: 'Enjoy your relaxation time!',
+              postId: 9, // Replace with the actual post ID
+              commenter: 9, // Replace with the actual user ID
+            },
+            {
+              content: 'Beautiful artwork!',
+              postId: 10, // Replace with the actual post ID
+              commenter: 10, // Replace with the actual user ID
+            },
+            {
+              content: 'What s your favorite destination?',
+              postId: 11, // Replace with the actual post ID
+              commenter: 11, // Replace with the actual user ID
+            },
+            {
+              content: 'Keep up the great work!',
+              postId: 12, // Replace with the actual post ID
+              commenter: 12, // Replace with the actual user ID
+            },
+          ];
+          const categoryData = [
+            {
+              type: 'men',
+            },
+            {
+              type: 'women',
+            },
+            {
+              type: 'child',
+            },
+          ];
+          
+          
           
           
           
@@ -455,6 +530,28 @@ main()
           await prisma.user.createMany({
             data: dummyUsers,
           });
+          await prisma.product.createMany({
+            data: productData
+          });
+          await prisma.userChatRoom.createMany({
+            data : userChatRoomData
+          });
+          await prisma.chatRoom.createMany({
+            data: chatRoomData
+          });
+          await prisma.message.createMany({
+            data: messageData
+          });
+          await prisma.post.createMany({
+            data : postData
+          });
+          await prisma.comment.createMany({
+            data: commentData
+          });
+          await prisma.category.createMany({
+            data: categoryData
+          });
+          
           console.log('Dummy users created successfully');
         } catch (error) {
           console.error('Error creating dummy users:', error);
@@ -462,6 +559,7 @@ main()
           await prisma.$disconnect();
         }
       }
+      createDummyUsers();
 
 
 module.exports = prisma    
