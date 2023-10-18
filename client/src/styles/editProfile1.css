@@ -1,0 +1,1201 @@
+.edit-profile-page {
+  background-color: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.edit-profile-page .overlap-wrapper {
+  background-color: inherit;
+  height: 2468px;
+  width: 1440px;
+}
+
+.edit-profile-page .overlap {
+  background: inherit;
+  height: 2468px;
+  position: relative;
+}
+
+.edit-profile-page .footer {
+  height: 202px;
+  left: 122px;
+  position: absolute;
+  top: 2226px;
+  width: 1199px;
+}
+
+.edit-profile-page .overlap-group {
+  height: 202px;
+  position: relative;
+  width: 1197px;
+}
+
+.edit-profile-page .footer-2 {
+  height: 202px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1197px;
+}
+
+.edit-profile-page .group {
+  height: 202px;
+  left: 419px;
+  position: absolute;
+  top: 0;
+  width: 143px;
+}
+
+.edit-profile-page .text-wrapper-8 {
+  color: #ffffff;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.edit-profile-page .text-wrapper-9 {
+  color: #ffffff80;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 50px;
+}
+
+.edit-profile-page .text-wrapper-10 {
+  color: #ffffff80;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 93px;
+}
+
+.edit-profile-page .text-wrapper-11 {
+  color: #ffffff80;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 136px;
+}
+
+.edit-profile-page .text-wrapper-12 {
+  color: #ffffff80;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 179px;
+}
+
+.edit-profile-page .group-2 {
+  height: 202px;
+  left: 683px;
+  position: absolute;
+  top: 0;
+  width: 129px;
+}
+
+.edit-profile-page .div-wrapper {
+  height: 100px;
+  left: 0;
+  position: absolute;
+  top: 50px;
+  width: 290px;
+}
+
+.edit-profile-page .p {
+  color: #ffffff80;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 25px;
+  position: absolute;
+  top: 0;
+  width: 288px;
+}
+
+.edit-profile-page .group-3 {
+  height: 161px;
+  left: 933px;
+  position: absolute;
+  top: 0;
+  width: 270px;
+}
+
+.edit-profile-page .frame {
+  align-items: center;
+  display: inline-flex;
+  gap: 40px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 136px;
+}
+
+.edit-profile-page .icon-instance-node {
+  height: 25px !important;
+  position: relative !important;
+  width: 25px !important;
+}
+
+.edit-profile-page .text-wrapper-13 {
+  color: #6c5dd3;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.edit-profile-page .overlap-2 {
+  height: 689px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.edit-profile-page .banner {
+  height: 542px;
+  left: 201px;
+  position: absolute;
+  top: 147px;
+  width: 1040px;
+}
+
+.edit-profile-page .overlap-3 {
+  height: 422px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1040px;
+}
+
+.edit-profile-page .overlap-4 {
+  height: 409px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1040px;
+}
+
+.edit-profile-page .cover-image {
+  height: 355px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1040px;
+}
+
+.edit-profile-page .edit-cover-image {
+  height: 49px;
+  left: 971px;
+  position: absolute;
+  top: 287px;
+  width: 49px;
+}
+
+.edit-profile-page .profile-pic {
+  height: 124px;
+  left: 460px;
+  position: absolute;
+  top: 285px;
+  width: 120px;
+}
+
+.edit-profile-page .overlap-group-2 {
+  height: 127px;
+  left: -3px;
+  position: relative;
+  top: -3px;
+  width: 126px;
+}
+
+.edit-profile-page .ellipse {
+  height: 100px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.edit-profile-page .ellipse-2 {
+  background-color: #6c5dd3;
+  border-radius: 15.5px;
+  height: 31px;
+  left: 89px;
+  position: absolute;
+  top: 96px;
+  width: 31px;
+}
+
+.edit-profile-page .vector {
+  height: 12px;
+  left: 98px;
+  position: absolute;
+  top: 106px;
+  width: 14px;
+}
+
+.edit-profile-page .edit-profile {
+  align-items: center;
+  background-color: #6c5dd3;
+  border-radius: 150px;
+  display: flex;
+  gap: 10px;
+  height: 45px;
+  justify-content: center;
+  left: 876px;
+  padding: 10px;
+  position: absolute;
+  top: 377px;
+  width: 164px;
+}
+
+.edit-profile-page .vector-2 {
+  height: 14px;
+  position: relative;
+  width: 14px;
+}
+
+.edit-profile-page .text-wrapper-14 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Semibold", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.edit-profile-page .text {
+  height: 115px;
+  left: 71px;
+  position: absolute;
+  top: 427px;
+  width: 902px;
+}
+
+.edit-profile-page .text-wrapper-15 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Semibold", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  left: 371px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.edit-profile-page .text-wrapper-16 {
+  color: #ffffff66;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 417px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 34px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .text-wrapper-17 {
+  color: #ffffffcc;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 25px;
+  position: absolute;
+  text-align: center;
+  top: 65px;
+  width: 896px;
+}
+
+.edit-profile-page .header {
+  height: 101px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.edit-profile-page .drop-down-open-instance {
+  left: 1014px !important;
+  position: absolute !important;
+  top: 70px !important;
+}
+
+.edit-profile-page .photos-sec {
+  height: 371px;
+  left: 200px;
+  position: absolute;
+  top: 771px;
+  width: 345px;
+}
+
+.edit-profile-page .overlap-5 {
+  height: 371px;
+  position: relative;
+  width: 349px;
+}
+
+.edit-profile-page .overlap-group-wrapper {
+  height: 371px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 349px;
+}
+.chooseFileContainer{
+background-color: #6c5dd3;
+width:60px;
+height:50px;
+border-radius: 25%;
+cursor: pointer;
+grid-gap: 10px;
+}
+.edit-profile-page .overlap-group-3 {
+  background-color: #ffffff1a;
+  border-radius: 5px;
+  height: 371px;
+  position: relative;
+  width: 345px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+
+}
+
+.edit-profile-page .text-wrapper-18 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Semibold", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 20px;
+  letter-spacing: 0.2px;
+  line-height: normal;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.edit-profile-page .text-wrapper-19 {
+  color: #6c5dd3;
+  font-family: "SF Pro Display-Semibold", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 221px;
+  letter-spacing: 0.16px;
+  line-height: normal;
+  position: absolute;
+  top: 23px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .rectangle {
+  height: 91px;
+  left: 20px;
+  object-fit: cover;
+ 
+  top: 65px;
+  width: 95px;
+}
+
+.edit-profile-page .rectangle-2 {
+  height: 91px;
+  left: 20px;
+  object-fit: cover;
+  position: absolute;
+  top: 166px;
+  width: 95px;
+}
+
+.edit-profile-page .rectangle-3 {
+  height: 91px;
+  left: 20px;
+  object-fit: cover;
+  position: absolute;
+  top: 267px;
+  width: 95px;
+}
+
+.edit-profile-page .rectangle-4 {
+  height: 91px;
+  left: 125px;
+  position: absolute;
+  top: 65px;
+  width: 95px;
+}
+
+.edit-profile-page .rectangle-5 {
+  height: 91px;
+  left: 125px;
+  object-fit: cover;
+  position: absolute;
+  top: 166px;
+  width: 95px;
+}
+
+.edit-profile-page .rectangle-6 {
+  height: 91px;
+  left: 125px;
+  object-fit: cover;
+  position: absolute;
+  top: 267px;
+  width: 95px;
+}
+
+.edit-profile-page .rectangle-7 {
+  height: 91px;
+  left: 230px;
+  object-fit: cover;
+  position: absolute;
+  top: 65px;
+  width: 95px;
+}
+
+.edit-profile-page .rectangle-8 {
+  height: 91px;
+  left: 230px;
+  position: absolute;
+  top: 166px;
+  width: 95px;
+}
+
+.edit-profile-page .feed-sec {
+  height: 631px;
+  left: 575px;
+  position: absolute;
+  top: 769px;
+  width: 674px;
+}
+
+.edit-profile-page .comment-sec {
+  height: 39px;
+  left: 0;
+  position: absolute;
+  top: 592px;
+  width: 668px;
+}
+
+.edit-profile-page .overlap-group-4 {
+  background-color: #464b67;
+  border-radius: 150px;
+  height: 39px;
+  position: relative;
+  width: 666px;
+}
+
+.edit-profile-page .text-wrapper-20 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 11px;
+}
+
+.edit-profile-page .ellipse-3 {
+  height: 29px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 5px;
+  width: 29px;
+}
+
+.edit-profile-page .vector-3 {
+  height: 18px;
+  left: 633px;
+  position: absolute;
+  top: 11px;
+  width: 18px;
+}
+
+.edit-profile-page .ellipse-4 {
+  height: 43px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 43px;
+}
+
+.edit-profile-page .text-wrapper-21 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Semibold", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 56px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.edit-profile-page .text-wrapper-22 {
+  color: #ffffff80;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 56px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 27px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .text-wrapper-23 {
+  color: #ffffff80;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 178px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .text-wrapper-24 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Medium", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 71px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .rectangle-9 {
+  height: 426px;
+  left: 0;
+  position: absolute;
+  top: 106px;
+  width: 666px;
+}
+
+.edit-profile-page .frame-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 76px;
+  left: 1px;
+  position: absolute;
+  top: 555px;
+}
+
+.edit-profile-page .group-4 {
+  height: 21.58px;
+  position: relative;
+  width: 194.94px;
+}
+
+.edit-profile-page .group-5 {
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 70px;
+}
+
+.edit-profile-page .vector-4 {
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 21px;
+}
+
+.edit-profile-page .text-wrapper-25 {
+  color: #6c5dd3;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 31px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 3px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .text-wrapper-26 {
+  color: #ffffff80;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 78px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 2px;
+}
+
+.edit-profile-page .group-6 {
+  height: 20px;
+  position: relative;
+  width: 191.06px;
+}
+
+.edit-profile-page .group-7 {
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 99px;
+}
+
+.edit-profile-page .text-wrapper-27 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.edit-profile-page .vector-5 {
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.edit-profile-page .text-wrapper-28 {
+  color: #ffffff80;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 1px;
+}
+
+.edit-profile-page .group-8 {
+  height: 21px;
+  margin-right: -2px;
+  position: relative;
+  width: 132.06px;
+}
+
+.edit-profile-page .group-9 {
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 70px;
+}
+
+.edit-profile-page .text-wrapper-29 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 1px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .vector-6 {
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 19px;
+}
+
+.edit-profile-page .overlap-6 {
+  height: 631px;
+  left: 575px;
+  position: absolute;
+  top: 1465px;
+  width: 674px;
+}
+
+.edit-profile-page .feed-sec-2 {
+  height: 631px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 674px;
+}
+
+.edit-profile-page .frame-3 {
+  align-items: center;
+  display: inline-flex;
+  gap: 15.26px;
+  justify-content: center;
+  left: 89px;
+  position: absolute;
+  top: 221px;
+}
+
+.edit-profile-page .vector-wrapper {
+  background-color: #ffffff33;
+  border-radius: 2.42px;
+  height: 33.91px;
+  position: relative;
+  width: 36.33px;
+}
+
+.edit-profile-page .vector-7 {
+  height: 2px;
+  left: 9px;
+  position: absolute;
+  top: 16px;
+  width: 17px;
+}
+
+.edit-profile-page .group-10 {
+  height: 9.32px;
+  position: relative;
+  width: 184.79px;
+}
+
+.edit-profile-page .overlap-group-5 {
+  height: 9px;
+  position: relative;
+  width: 185px;
+}
+
+.edit-profile-page .rectangle-10 {
+  background-color: #747474;
+  border-radius: 178.86px;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 185px;
+}
+
+.edit-profile-page .rectangle-11 {
+  background-color: #ffffff;
+  border-radius: 178.86px;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 81px;
+}
+
+.edit-profile-page .ellipse-5 {
+  background-color: #ffffff;
+  border-radius: 4.66px;
+  box-shadow: 0px 0px 3.39px #00000059;
+  height: 9px;
+  left: 73px;
+  position: absolute;
+  top: 0;
+  width: 9px;
+}
+
+.edit-profile-page .vector-8 {
+  height: 14px;
+  left: 11px;
+  position: absolute;
+  top: 10px;
+  width: 14px;
+}
+
+.edit-profile-page .my-group-sec {
+  height: 320px;
+  left: 200px;
+  position: absolute;
+  top: 1522px;
+  width: 347px;
+}
+
+.edit-profile-page .overlap-7 {
+  height: 320px;
+  position: relative;
+  width: 345px;
+}
+
+.edit-profile-page .group-wrapper {
+  height: 320px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 345px;
+}
+
+.edit-profile-page .group-11 {
+  height: 320px;
+  width: 347px;
+}
+
+.edit-profile-page .overlap-group-6 {
+  background-color: #ffffff1a;
+  border-radius: 5px;
+  height: 320px;
+  position: relative;
+  width: 345px;
+}
+
+.edit-profile-page .text-wrapper-30 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Semibold", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 20px;
+  letter-spacing: 0.2px;
+  line-height: normal;
+  position: absolute;
+  top: 17px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .group-12 {
+  height: 44px;
+  left: 22px;
+  position: absolute;
+  top: 91px;
+  width: 307px;
+}
+
+.edit-profile-page .frame-4 {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(183, 92, 255) 0%, rgb(103, 26, 228) 100%);
+  border-radius: 4.45px;
+  display: flex;
+  gap: 4.45px;
+  height: 28px;
+  justify-content: center;
+  left: 211px;
+  padding: 4.45px 8.89px;
+  position: absolute;
+  top: 8px;
+  width: 92px;
+}
+
+.edit-profile-page .text-wrapper-31 {
+  color: #ffffff;
+  font-family: "Poppins-SemiBold", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.edit-profile-page .photo {
+  height: 44px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 44px;
+}
+
+.edit-profile-page .text-wrapper-32 {
+  color: #ffffff;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 55px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 12px;
+}
+
+.edit-profile-page .text-wrapper-33 {
+  color: #ffffff80;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  left: 165px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 13px;
+}
+
+.edit-profile-page .group-13 {
+  height: 28px;
+  left: 77px;
+  position: absolute;
+  top: 168px;
+  width: 252px;
+}
+
+.edit-profile-page .frame-5 {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(183, 92, 255) 0%, rgb(103, 26, 228) 100%);
+  border-radius: 4.45px;
+  display: flex;
+  gap: 4.45px;
+  height: 28px;
+  justify-content: center;
+  left: 156px;
+  padding: 4.45px 8.89px;
+  position: absolute;
+  top: 0;
+  width: 92px;
+}
+
+.edit-profile-page .text-wrapper-34 {
+  color: #ffffff;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+}
+
+.edit-profile-page .text-wrapper-35 {
+  color: #ffffff80;
+  font-family: "Poppins-Medium", Helvetica;
+  font-size: 12px;
+  font-weight: 500;
+  left: 110px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 5px;
+}
+
+.edit-profile-page .group-14 {
+  height: 28px;
+  left: 77px;
+  position: absolute;
+  top: 237px;
+  width: 252px;
+}
+
+.edit-profile-page .text-wrapper-36 {
+  color: #6c5dd3;
+  font-family: "SF Pro Display-Semibold", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 219px;
+  letter-spacing: 0.16px;
+  line-height: normal;
+  position: absolute;
+  top: 291px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .photo-2 {
+  height: 44px;
+  left: 22px;
+  position: absolute;
+  top: 160px;
+  width: 44px;
+}
+
+.edit-profile-page .photo-3 {
+  height: 44px;
+  left: 22px;
+  position: absolute;
+  top: 229px;
+  width: 44px;
+}
+
+.edit-profile-page .frame-6 {
+  align-items: center;
+  border: 0.3px solid;
+  border-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  height: 29px;
+  justify-content: center;
+  left: 192px;
+  padding: 10px;
+  position: absolute;
+  top: 15px;
+  width: 143px;
+}
+
+.edit-profile-page .text-wrapper-37 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  line-height: normal;
+  margin-bottom: -2.2px;
+  margin-top: -2.8px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.edit-profile-page .vector-9 {
+  height: 6.6px;
+  position: relative;
+  width: 10.6px;
+}
+
+.edit-profile-page .meta-look-sec {
+  height: 320px;
+  left: 200px;
+  position: absolute;
+  top: 1172px;
+  width: 347px;
+}
+
+.edit-profile-page .text-wrapper-38 {
+  color: #ffffff;
+  font-family: "SF Pro Display-Semibold", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+}
+
+.edit-profile-page .rectangle-12 {
+  height: 222px;
+  left: 87px;
+  object-fit: cover;
+  position: absolute;
+  top: 52px;
+  width: 173px;
+}
+
+.edit-profile-page .frame-7 {
+  align-items: center;
+  display: inline-flex;
+  gap: 12.15px;
+  justify-content: center;
+  left: 58px;
+  position: absolute;
+  top: 280px;
+}
+
+.edit-profile-page .img-wrapper {
+  background-color: #ffffff33;
+  border-radius: 1.93px;
+  height: 27px;
+  position: relative;
+  width: 28.93px;
+}
+
+.edit-profile-page .vector-10 {
+  height: 2px;
+  left: 7px;
+  position: absolute;
+  top: 13px;
+  width: 14px;
+}
+
+.edit-profile-page .group-15 {
+  height: 7.43px;
+  position: relative;
+  width: 147.15px;
+}
+
+.edit-profile-page .overlap-group-7 {
+  height: 7px;
+  position: relative;
+  width: 147px;
+}
+
+.edit-profile-page .rectangle-13 {
+  background-color: #747474;
+  border-radius: 142.43px;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 147px;
+}
+
+.edit-profile-page .rectangle-14 {
+  background-color: #ffffff;
+  border-radius: 142.43px;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 65px;
+}
+
+.edit-profile-page .ellipse-6 {
+  background-color: #ffffff;
+  border-radius: 3.71px;
+  box-shadow: 0px 0px 2.7px #00000059;
+  height: 7px;
+  left: 58px;
+  position: absolute;
+  top: 0;
+  width: 7px;
+}
+
+.edit-profile-page .vector-11 {
+  height: 11px;
+  left: 9px;
+  position: absolute;
+  top: 8px;
+  width: 11px;
+}
