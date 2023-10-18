@@ -19,7 +19,9 @@ import Image from 'next/image'
 // import ProductCard from '../components/NewTrending'
 // import NavBar from '../components/NavBar'
 // import Footer from '../components/Footer'
-// import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { AppDispatch } from '@/store'
+import { getUser } from '@/store/signinReduser'
 // import { RootState, AppDispatch } from '../store'
 // import { fetchProducts } from '../components/ProductData/productData'
 
@@ -83,7 +85,7 @@ const Home = () => {
 
 
 
-    // const dispatch: AppDispatch = useDispatch()
+    const dispatch: AppDispatch = useDispatch()
 
     // const products = useSelector((state: RootState) => state.products.products)
     // console.log(products, 'those are products');
@@ -99,6 +101,7 @@ const Home = () => {
 
 
     const [brands, setBrands] = useState<User[]>([]);
+   
     // useEffect(() => {
     //     axios.get<User[]>("http://localhost:5000/api/user/getUserByRole/brand").then((response) => {
     //         const users = response.data.map((user) => ({
