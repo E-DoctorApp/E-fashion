@@ -1,0 +1,121 @@
+/* Shared styles */
+.allBtn,
+select {
+    background-color: inherit;
+    display: flex;
+    width: 178px;
+    height: 42px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 0.5px solid #FFF;
+    color: white;
+    cursor: pointer; /* Add pointer cursor for better UX */ 
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.allBtn:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Use a common font for better compatibility */
+}
+
+#allNftPage {
+    margin-top: 100px;
+    min-height: 750px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar styles */
+.sideBar {
+    background-color: rgba(255, 255, 255, 0.10);
+    min-height: 100%;
+    width: 24%;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.topSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.sideOptions div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    padding: 0px 10px;
+}
+
+.sideOptions div h6 {
+    padding: 15px;
+    margin: 0; /* Reset margin to avoid unexpected spaces */
+}
+
+/* Content styles */
+.content {
+    border-radius: 10px;
+    width: 76%; /* Adjusted width for better layout */
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.results {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Reset margin to avoid unexpected spaces */
+}
+
+.cards {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.select {
+    margin-left: 0%;
+}
+.top button,
+.top select {
+    display: inline-block;
+    vertical-align: middle; /* Align elements vertically in the middle */
+    margin-right: 10px; /* Add some space between the button and the select element */
+}
+.select {
+background-color: inherit;
+display: flex;
+width: 178px;
+height: 42px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 5px;
+border: 0.5px solid #FFF;
+color: white;
+cursor: pointer; /* Add pointer cursor for better UX */
+transition: background-color 0.3s ease; /* Smooth hover transition */
+}

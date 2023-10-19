@@ -1,19 +1,36 @@
 "use client"
 import React from "react";
 import asset from '../../../public/Assests/images/Brandpage/unsplash_DbOdCSoefsg.png'
-import asset1 from '../../../public/Assests/images/Brandpage/albert-dera-ILip77SbmOE-unsplash 1.png'
-import tick from '../../../public/Assests/images/Brandpage/tick.svg'
-import vec from '../../../public/Assests/images/Brandpage/Vector.svg'
-import vec1 from '../../../public/Assests/images/Brandpage/Vector (1).svg'
-import grp from '../../../public/Assests/images/Brandpage/Group.svg'
-import "../../styles/BrandPage.css"
+// import asset1 from '../../../public/Assests/images/Brandpage/albert-dera-ILip77SbmOE-unsplash 1.png'
+// import tick from '../../../public/Assests/images/Brandpage/tick.svg'
+// import vec from '../../../public/Assests/images/Brandpage/Vector.svg'
+// import vec1 from '../../../public/Assests/images/Brandpage/Vector (1).svg'
+// import grp from '../../../public/Assests/images/Brandpage/Group.svg'
+// import img2 from '../../../public/Assests/images/Brandpage/albert-dera-ILip77SbmOE-unsplash 1.png'
+import "../../styles/BrandPage.css";
 import Image from "next/image";
-// import NavBar from "./NavBar";
-// import Footer from "./Footer";
+import { ImageResponse } from "next/server";
+import axios from "axios";
+import OneProduct from "../../componnents/OneProduct";
+import NavBar from "../../componnents/NavBar";
+import Footer from "../../componnents/Footer";
 
- const BrandPage = () => {
-    return (<div>
-        {/* <NavBar/> */}
+
+
+
+function page() {
+    const handleFilterByStatus =(status:String)=>{
+        axios.get(`http://localhost:5000/api/products/getAllByStatus/${status}`)
+        .then((response)=>{
+    
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+    }
+    return (
+    <div>
+        <NavBar/>
         <div className="brand-page">
             <div className="overlap-wrapper">
                 <div className="overlap">
@@ -22,7 +39,7 @@ import Image from "next/image";
                             <div className="overlap-group-2">
                                 <div className="overlap-group-2">
                                     <Image className="unsplash-dbodcsoefsg" alt="Unsplash dbodcsoefsg" src={asset} />
-                                    <Image className="photo" alt="Photo" src={asset1} />
+                                    <Image className="photo" alt="Photo" src={asset} />
                                 </div>
                                 <div className="text-wrapper-8">Zara</div>
                                 <div className="text-wrapper-9">@zara</div>
@@ -53,7 +70,7 @@ import Image from "next/image";
                         <div className="overlap-group-wrapper">
                             <div className="overlap-group-3">
                                 <div className="ellipse" />
-                                <img className="vector" alt="Vector" src={tick} />
+                                <Image className="vector" alt="Vector" src={asset} />
                             </div>
                         </div>
                       
@@ -76,7 +93,7 @@ import Image from "next/image";
                                 <div className="text-wrapper-19">Floor Price</div>
                                 <div className="group-3">
                                     <div className="text-wrapper-20">19.6</div>
-                                    <img className="vector-2" alt="Vector" src={vec} />
+                                    <Image className="vector-2" alt="Vector" src={asset} />
                                 </div>
                             </div>
                         </div>
@@ -85,13 +102,15 @@ import Image from "next/image";
                                 <div className="text-wrapper-21">Volume Traded</div>
                                 <div className="group-5">
                                     <div className="text-wrapper-20">240K</div>
-                                    <img className="vector-2" alt="Vector" src={vec} />
+                                    <Image className="vector-2" alt="Vector" src={asset} />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="group-6">
-                        <div className="text-wrapper-22">Items</div>
+                        <OneProduct/>
+                  
+                        {/* <div className="text-wrapper-22">Items</div>
                         <div className="group-7">
                             <div className="overlap-2">
                                 <div className="div-2">
@@ -100,14 +119,14 @@ import Image from "next/image";
                                         <div className="text-wrapper-24">Lorem Ipsum</div>
                                         <div className="text-wrapper-25">0.005 ETH</div>
                                         <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-6.png" />
+                                        <Image className="collection" alt="Collection" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-8">
                                     <div className="frame-3">
                                         <div className="text-wrapper-27">Buy Now</div>
                                     </div>
-                                    <img className="vector-3" alt="Vector" src="vector-2.svg" />
+                                    <Image className="vector-3" alt="Vector" src={asset} />
                                 </div>
                             </div>
                             <div className="div-2">
@@ -117,14 +136,14 @@ import Image from "next/image";
                                         <div className="text-wrapper-24">Lorem Ipsum</div>
                                         <div className="text-wrapper-25">0.005 ETH</div>
                                         <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-4.png" />
+                                        <Image className="collection" alt="Collection" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-8">
                                     <div className="frame-3">
                                         <div className="text-wrapper-27">Buy Now</div>
                                     </div>
-                                    <img className="vector-3" alt="Vector" src="vector-6.svg" />
+                                    <Image className="vector-3" alt="Vector" src={asset} />
                                 </div>
                             </div>
                             <div className="overlap-3">
@@ -134,14 +153,14 @@ import Image from "next/image";
                                         <div className="text-wrapper-24">Lorem Ipsum</div>
                                         <div className="text-wrapper-25">0.005 ETH</div>
                                         <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-7.png" />
+                                        <Image className="collection" alt="Collection" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-8">
                                     <div className="frame-3">
                                         <div className="text-wrapper-27">Buy Now</div>
                                     </div>
-                                    <img className="vector-3" alt="Vector" src="vector-5.svg" />
+                                    <Image className="vector-3" alt="Vector" src={asset} />
                                 </div>
                             </div>
                             <div className="overlap-4">
@@ -151,14 +170,14 @@ import Image from "next/image";
                                         <div className="text-wrapper-24">Lorem Ipsum</div>
                                         <div className="text-wrapper-25">0.005 ETH</div>
                                         <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-8.png" />
+                                        <Image className="collection" alt="Collection" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-8">
                                     <div className="frame-3">
                                         <div className="text-wrapper-27">Buy Now</div>
                                     </div>
-                                    <img className="vector-3" alt="Vector" src="vector-4.svg" />
+                                    <Image className="vector-3" alt="Vector" src={asset} />
                                 </div>
                             </div>
                             <div className="overlap-5">
@@ -168,14 +187,14 @@ import Image from "next/image";
                                         <div className="text-wrapper-24">Lorem Ipsum</div>
                                         <div className="text-wrapper-25">0.005 ETH</div>
                                         <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-5.png" />
+                                        <Image className="collection" alt="Collection" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-8">
                                     <div className="frame-3">
                                         <div className="text-wrapper-27">Buy Now</div>
                                     </div>
-                                    <img className="vector-3" alt="Vector" src="vector-7.svg" />
+                                    <Image className="vector-3" alt="Vector" src={asset} />
                                 </div>
                             </div>
                             <div className="overlap-6">
@@ -185,130 +204,62 @@ import Image from "next/image";
                                         <div className="text-wrapper-24">Lorem Ipsum</div>
                                         <div className="text-wrapper-25">0.005 ETH</div>
                                         <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-9.png" />
+                                        <Image className="collection" alt="Collection" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-8">
                                     <div className="frame-3">
                                         <div className="text-wrapper-27">Buy Now</div>
                                     </div>
-                                    <img className="vector-3" alt="Vector" src="vector-3.svg" />
+                                    <Image className="vector-3" alt="Vector" src={asset} />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="group-wrapper">
                         <div className="group-9">
-                            <div className="overlap-2">
+                            {/* <div className="overlap-2">
                                 <div className="div-2">
                                     <div className="overlap-group-5">
                                         <div className="text-wrapper-23">@Johny</div>
                                         <div className="text-wrapper-24">Lorem Ipsum</div>
                                         <div className="text-wrapper-25">0.005 ETH</div>
                                         <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="image.png" />
+                                        <Image className="collection" alt="Collection" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-8">
                                     <div className="frame-3">
                                         <div className="text-wrapper-27">Buy Now</div>
                                     </div>
-                                    <img className="vector-3" alt="Vector" src="vector-8.svg" />
+                                    <Image className="vector-3" alt="Vector" src={asset} />
                                 </div>
-                            </div>
-                            <div className="div-2">
+                            </div> */}
+                           
+                         
+                            {/* <div className="overlap-6">
                                 <div className="div-2">
                                     <div className="overlap-group-5">
                                         <div className="text-wrapper-23">@Johny</div>
                                         <div className="text-wrapper-24">Lorem Ipsum</div>
                                         <div className="text-wrapper-25">0.005 ETH</div>
                                         <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-4-2.png" />
+                                        <Image className="collection" alt="Collection" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-8">
                                     <div className="frame-3">
                                         <div className="text-wrapper-27">Buy Now</div>
                                     </div>
-                                    <img className="vector-3" alt="Vector" src="vector-12.svg" />
+                                    <Image className="vector-3" alt="Vector" src={asset} />
                                 </div>
-                            </div>
-                            <div className="overlap-3">
-                                <div className="div-2">
-                                    <div className="overlap-group-5">
-                                        <div className="text-wrapper-23">@Johny</div>
-                                        <div className="text-wrapper-24">Lorem Ipsum</div>
-                                        <div className="text-wrapper-25">0.005 ETH</div>
-                                        <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-7-2.png" />
-                                    </div>
-                                </div>
-                                <div className="group-8">
-                                    <div className="frame-3">
-                                        <div className="text-wrapper-27">Buy Now</div>
-                                    </div>
-                                    <img className="vector-3" alt="Vector" src="vector-11.svg" />
-                                </div>
-                            </div>
-                            <div className="overlap-4">
-                                <div className="div-2">
-                                    <div className="overlap-group-5">
-                                        <div className="text-wrapper-23">@Johny</div>
-                                        <div className="text-wrapper-24">Lorem Ipsum</div>
-                                        <div className="text-wrapper-25">0.005 ETH</div>
-                                        <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-8-2.png" />
-                                    </div>
-                                </div>
-                                <div className="group-8">
-                                    <div className="frame-3">
-                                        <div className="text-wrapper-27">Buy Now</div>
-                                    </div>
-                                    <img className="vector-3" alt="Vector" src="vector-10.svg" />
-                                </div>
-                            </div>
-                            <div className="overlap-5">
-                                <div className="div-2">
-                                    <div className="overlap-group-5">
-                                        <div className="text-wrapper-23">@Johny</div>
-                                        <div className="text-wrapper-24">Lorem Ipsum</div>
-                                        <div className="text-wrapper-25">0.005 ETH</div>
-                                        <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-5-2.png" />
-                                    </div>
-                                </div>
-                                <div className="group-8">
-                                    <div className="frame-3">
-                                        <div className="text-wrapper-27">Buy Now</div>
-                                    </div>
-                                    <img className="vector-3" alt="Vector" src="vector-13.svg" />
-                                </div>
-                            </div>
-                            <div className="overlap-6">
-                                <div className="div-2">
-                                    <div className="overlap-group-5">
-                                        <div className="text-wrapper-23">@Johny</div>
-                                        <div className="text-wrapper-24">Lorem Ipsum</div>
-                                        <div className="text-wrapper-25">0.005 ETH</div>
-                                        <div className="text-wrapper-26">Current Bid</div>
-                                        <img className="collection" alt="Collection" src="collection-9-2.png" />
-                                    </div>
-                                </div>
-                                <div className="group-8">
-                                    <div className="frame-3">
-                                        <div className="text-wrapper-27">Buy Now</div>
-                                    </div>
-                                    <img className="vector-3" alt="Vector" src="vector-9.svg" />
-                                </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
-                    <div className="group-10">
-                        
-                    </div>
+                    
                     <div className="group-15">
                         <div className="frame-5">
-                            <img className="vector-4" alt="Vector" src="vector-14.svg" />
+                            <Image className="vector-4" alt="Vector" src={asset} />
                             <div className="text-wrapper-35">Back To Collection</div>
                         </div>
                         <div className="group-16">
@@ -316,19 +267,19 @@ import Image from "next/image";
                                 <div className="group-17">
                                     <div className="overlap-group-3">
                                         <div className="ellipse" />
-                                        <img className="vector" alt="Vector" src="vector-15.svg" />
+                                        <Image className="vector" alt="Vector" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-18">
                                     <div className="overlap-group-3">
                                         <div className="ellipse" />
-                                        <img className="vector" alt="Vector" src="vector-16.svg" />
+                                        <Image className="vector" alt="Vector" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-19">
                                     <div className="overlap-group-3">
                                         <div className="ellipse" />
-                                        <img className="vector" alt="Vector" src="vector-17.svg" />
+                                        <Image className="vector" alt="Vector" src={asset} />
                                     </div>
                                 </div>
                                 <div className="group-20">
@@ -339,8 +290,8 @@ import Image from "next/image";
                                                 <div className="text-wrapper-37">+ Follow</div>
                                             </div>
                                             <div className="overlap-group-7">
-                                                <img className="creator" alt="Creator" src="creator-1.png" />
-                                                <img className="photo-2" alt="Photo" src="photo-1.png" />
+                                                <Image className="creator" alt="Creator" src={asset} />
+                                                <Image className="photo-2" alt="Photo" src={asset} />
                                             </div>
                                             <div className="text-wrapper-38">Adidas</div>
                                         </div>
@@ -352,8 +303,8 @@ import Image from "next/image";
                                                 <div className="text-wrapper-39">+ Followed</div>
                                             </div>
                                             <div className="overlap-group-7">
-                                                <img className="creator" alt="Creator" src="creator-2.png" />
-                                                <img className="photo-2" alt="Photo" src="photo-2-2.png" />
+                                                <Image className="creator" alt="Creator" src={asset} />
+                                                <Image className="photo-2" alt="Photo" src={asset} />
                                             </div>
                                             <div className="text-wrapper-40">Nike</div>
                                         </div>
@@ -365,8 +316,8 @@ import Image from "next/image";
                                                 <div className="text-wrapper-37">+ Follow</div>
                                             </div>
                                             <div className="overlap-group-7">
-                                                <img className="creator" alt="Creator" src="creator-3.png" />
-                                                <img className="photo-2" alt="Photo" src="photo-3.png" />
+                                                <Image className="creator" alt="Creator" src={asset} />
+                                                <Image className="photo-2" alt="Photo" src={asset} />
                                             </div>
                                             <div className="text-wrapper-41">Lacoste</div>
                                         </div>
@@ -385,45 +336,45 @@ import Image from "next/image";
                             <div className="group-22">
                                 <div className="text-wrapper-42">Status</div>
                             </div>
-                            <Image className="vector-5" alt="Vector" src={vec1} />
+                            <Image className="vector-5" alt="Vector" src={asset} />
                         </div>
                         <div className="group-23">
                             <div className="group-24">
                                 <div className="text-wrapper-42">Price</div>
                             </div>
-                            <Image className="vector-6" alt="Vector" src={vec1} />
+                            <Image className="vector-6" alt="Vector" src={asset} />
                         </div>
                         <div className="group-25">
                             <div className="group-26">
                                 <div className="text-wrapper-42">Collections</div>
                             </div>
-                            <Image className="vector-6" alt="Vector" src={vec1} />
+                            <Image className="vector-6" alt="Vector" src={asset} />
                         </div>
                         <div className="group-27">
                             <div className="group-28">
                                 <div className="text-wrapper-42">Chains</div>
                             </div>
-                            <Image className="vector-6" alt="Vector" src={vec1} />
+                            <Image className="vector-6" alt="Vector" src={asset} />
                         </div>
                         <div className="group-29">
                             <div className="text-wrapper-42">Categories</div>
-                            <Image className="vector-6" alt="Vector" src={vec1} />
+                            <Image className="vector-6" alt="Vector" src={asset} />
                         </div>
                         <div className="group-30">
                             <div className="text-wrapper-42">On Sale In</div>
-                            <Image className="vector-6" alt="Vector" src={vec1} />
+                            <Image className="vector-6" alt="Vector" src={asset} />
                         </div>
                         <div className="group-31">
                             <div className="text-wrapper-43">Filter</div>
-                            <Image className="group-32" alt="Group" src={grp} />
+                            <Image className="group-32" alt="Group" src={asset} />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        {/* <Footer/> */}
+        <Footer/>
         </div>
-    );
-};
+  )
+}
 
-export default BrandPage;
+export default page

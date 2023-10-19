@@ -1,22 +1,22 @@
-"use client";
 import React from "react";
-import "../styles/About.css";
-// import rect1 from '../../../public/Assests/images/Rectangle 1.png'
-// import rect2 from '../../../public/Assests/images/Rectangle 2.png'
-// import rect3 from '../../../public/Assests/images/Rectangle 3.png'
-// import rect4 from '../../../public/Assests/images/Rectangle 4.png'
-// import rect5 from '../../../public/Assests/images/Rectangle 5.png'
-// import rect6 from '../../../public/Assests/images/Rectangle 6.png'
-// import rect7 from '../../../public/Assests/images/Rectangle 7.png'
-// import rect8 from '../../../public/Assests/images/Rectangle 8.png'
-// import rect9 from '../../../public/Assests/images/Rectangle 9.png'
-// import NavBar from "./NavBar";
-// import Footer from "./Footer";
+import Image from "next/image";
+import styles from "../styles/About.module.css";
+import rect1 from '../../../public/Assests/images/Rectangle 1.png';
+import rect2 from '../../../public/Assests/images/Rectangle 2.png'
+import rect3 from '../../../public/Assests/images/Rectangle 3.png'
+import rect4 from '../../../public/Assests/images/Rectangle 4.png';
+import rect5 from '../../../public/Assests/images/Rectangle 5.png';
+import rect6 from '../../../public/Assests/images/Rectangle 6.png';
+import rect7 from '../../../public/Assests/images/Rectangle 7.png';
+import rect8 from '../../../public/Assests/images/Rectangle 8.png';
+import rect9 from '../../../public/Assests/images/Rectangle 9.png';
+import NavBar from "@/componnents/NavBar";
+import Footer from "@/componnents/Footer";
 
-export default function About() {
+ function About() {
   return (
     <div>
-      {/* <NavBar/> */}
+      <NavBar/>
       <div className="about-us-page">
         <div className="overlap-wrapper">
           <div className="overlap">
@@ -55,9 +55,9 @@ export default function About() {
               </div>
               <div className="overlap-group-wrapper">
                 <div className="overlap-group-2">
-                  {/* <img className="rectangle-2" alt="Rectangle" src={rect3} /> */}
-                  {/* <img className="rectangle-3" alt="Rectangle" src={rect2} /> */}
-                  {/* <img className="rectangle-4" alt="Rectangle" src={rect1} /> */}
+                  <Image className="rectangle-2" alt="Rectangle" src = {rect3} />
+                  <Image className="rectangle-3" alt="Rectangle" src = {rect2} />
+                  <Image className="rectangle-4" alt="Rectangle" src = {rect1} />
                 </div>
               </div>
               <div className="group-4">
@@ -75,16 +75,16 @@ export default function About() {
                   Adipiscing lacus vel lobortis sit tincidunt enim, libero. In
                   dignissim tortor sit sit convallis morbi.
                 </p>
-                <div className="frame-2">
+                <div className="frame-2">£
                   <div className="text-wrapper-13">More +</div>
                 </div>
               </div>
               <div className="group-7">
                 <div className="group-8">
                   <div className="overlap-group-3">
-                    {/* <img className="rectangle-6" alt="Rectangle" src={rect2}/>
-                                    <img className="rectangle-7" alt="Rectangle" src={rect1} />
-                                    <img className="rectangle-8" alt="Rectangle" src={rect3} /> */}
+                    <Image className="rectangle-6" alt="Rectangle" src={rect2}/> 
+                    <Image className="rectangle-7" alt="Rectangle" src={rect1} />
+                    <Image className="rectangle-8" alt="Rectangle" src={rect3} />
                   </div>
                 </div>
               </div>
@@ -99,28 +99,28 @@ export default function About() {
                 dignissim tortor sit sit convallis morbi.
               </p>
               <div className="group-10">
-                {/* <img className="rectangle-9" alt="Rectangle" src={rect4} /> */}
+                <Image className="rectangle-9" alt="Rectangle" src={rect4} />
                 <div className="text-wrapper-19">Ebony Nash</div>
                 <div className="frame-3">
                   <div className="text-wrapper-20">Co Founder</div>
                 </div>
               </div>
               <div className="group-11">
-                {/* <img className="rectangle-9" alt="Rectangle" src={rect5} /> */}
+                <Image className="rectangle-9" alt="Rectangle" src={rect5} />
                 <div className="text-wrapper-21">Tracy Reyes</div>
                 <div className="frame-3">
                   <div className="text-wrapper-20">COO</div>
                 </div>
               </div>
               <div className="group-12">
-                {/* <img className="rectangle-10" alt="Rectangle" src={rect7} /> */}
+                <Image className="rectangle-10" alt="Rectangle" src={rect7} />
                 <div className="frame-3">
                   <div className="text-wrapper-20">CEO</div>
                 </div>
                 <div className="text-wrapper-22">Cory Bass</div>
               </div>
               <div className="group-13">
-                {/* <img className="rectangle-9" alt="Rectangle" src={rect6} /> */}
+                <Image className="rectangle-9" alt="Rectangle" src={rect6} />
                 <div className="frame-3">
                   <div className="text-wrapper-20">Finance</div>
                 </div>
@@ -128,7 +128,7 @@ export default function About() {
               </div>
               <div className="group-14">
                 <div className="group-15" />
-                {/* <img className="rectangle-10" alt="Rectangle" src={rect9} /> */}
+                <Image className="rectangle-10" alt="Rectangle" src={rect9} />
                 <div className="frame-3">
                   <div className="text-wrapper-20">CTO</div>
                 </div>
@@ -136,7 +136,7 @@ export default function About() {
               </div>
               <div className="group-16">
                 <div className="group-17" />
-                {/* <img className="rectangle-9" alt="Rectangle" src={rect8} /> */}
+                <Image className="rectangle-9" alt="Rectangle" src={rect8} />
                 <div className="frame-3">
                   <div className="text-wrapper-20">Member</div>
                 </div>
@@ -146,7 +146,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }
+export default About

@@ -9,9 +9,6 @@ const userRouter = require('./routers/user.router')
 const productRouter = require('./routers/product.router')
 
 const postRouter = require('./routers/post.router')
-
-const categoryRouter = require("./routers/category.router")
-
 const wishlistRouter = require('./routers/wishList.router')
 const port = process.env.PORT; // Change this to your desired port number
 
@@ -24,9 +21,6 @@ app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 
 app.use("/api/posts", postRouter)
-
-app.use("/api/category",categoryRouter)
-
 app.use("/api/wishlists", wishlistRouter);
 
 // Define a route

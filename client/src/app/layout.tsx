@@ -6,7 +6,7 @@ import "../styles/About.css"
 import "../styles/brandDropCard.css"
 import "../styles/BrandPage.css"
 import "../styles/BrandStorePage.css"
-// import "../styles/drops.css"
+import { ReduxProvider } from '@/store/provider'
 
 
 
@@ -24,7 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   )
 }
