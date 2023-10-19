@@ -75,7 +75,7 @@ const LiveChat = () => {
     useEffect(() => {
       socket.on("receive_msg", (data: IMsgDataTypes) => {
         console.log("receive_msg",data);
-        
+        // 777
         setChat([...chat,data]);
       });
 
