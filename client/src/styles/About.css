@@ -1,7 +1,6 @@
 
 
 
-
 .about-us-page .overlap {
     background: inherit;
     height: 3780px;
@@ -13,19 +12,20 @@
 }
 
 .about-us-page .overlap-group {
+    margin-top: 20%;
     height: 640px;
-    left: 0;
+    left: 600ùpx;
     position: absolute;
     top: 0;
     width: 1440px;
+    border: none;
 }
-
-.about-us-page .group {
-    height: 382px;
-    left: 412px;
-    position: absolute;
-    top: 258px;
-    width: 619px;
+.about-us-page .overlap-group {
+    height: 640px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    border: none;
 }
 
 .about-us-page .group-wrapper {
@@ -73,7 +73,6 @@
 .about-us-page .frame {
     align-items: center;
     background: linear-gradient(180deg, rgb(183, 92, 255) 0%, rgb(103, 26, 228) 100%);
-    border-radius: 10px;
     display: inline-flex;
     gap: 10px;
     justify-content: center;
@@ -112,7 +111,7 @@
 
 .about-us-page .rectangle {
     background-color: #6c5dd3;
-    border-radius: 1.5px 1.5px 0px 0px;
+  
     height: 2px;
     left: 263px;
     position: absolute;
@@ -129,7 +128,7 @@
 
 .about-us-page .group-3 {
     height: 485px;
-    left: 136px;
+    left: 142px;
     position: absolute;
     top: 812px;
     width: 1172px;
@@ -164,7 +163,6 @@
 .about-us-page .div-wrapper {
     align-items: center;
     background: linear-gradient(180deg, rgb(183, 92, 255) 0%, rgb(103, 26, 228) 100%);
-    border-radius: 10px;
     display: inline-flex;
     gap: 10px;
     justify-content: center;
@@ -252,7 +250,6 @@
 
 .about-us-page .rectangle-5 {
     background-color: #6c5dd3;
-    border-radius: 1.5px 1.5px 0px 0px;
     height: 2px;
     left: 0;
     position: absolute;
@@ -305,7 +302,7 @@
 .about-us-page .frame-2 {
     align-items: center;
     background: linear-gradient(180deg, rgb(183, 92, 255) 0%, rgb(103, 26, 228) 100%);
-    border-radius: 10px;
+   
     display: inline-flex;
     gap: 10px;
     justify-content: center;
@@ -328,6 +325,7 @@
 }
 
 .about-us-page .overlap-group-3 {
+    margin-left: 15%;
     height: 481px;
     left: -34px;
     position: relative;
@@ -363,7 +361,7 @@
 
 .about-us-page .group-9 {
     height: 1289px;
-    left: 211px;
+    left: 250px;
     position: absolute;
     top: 2077px;
     width: 1017px;
@@ -431,7 +429,6 @@
 .about-us-page .frame-3 {
     align-items: center;
     background-color: #ffffff33;
-    border-radius: 150px;
     display: flex;
     gap: 10px;
     height: 36px;
