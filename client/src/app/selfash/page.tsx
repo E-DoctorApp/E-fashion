@@ -1,4 +1,5 @@
 "use client"
+import LiveChat from '@/componnents/LiveChat';
 // Streamer.tsx
 import React, { useEffect, useRef } from 'react';
 // import Peer from 'peerjs';
@@ -33,6 +34,7 @@ function Streamer() {
     <div>
       <h2>Streaming</h2>
       <video ref={videoRef} autoPlay muted playsInline ></video>
+      <LiveChat/>
     </div>
   );
 }
