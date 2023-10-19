@@ -84,6 +84,18 @@ module.exports.getOneUser = async (req, res) => {
     res.json(req.user)
 };
 
+
+module.exports.getUserByType = async (req, res) => {
+    try {
+        const response = await prisma.user.findMany({ where: { type: req.params.type } })
+        console.log(response);
+        res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
 // module.exports.updateLists = async (req, res) => {
 //     try {
 //         const update = await User.update(req.body, {

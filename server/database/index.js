@@ -1,9 +1,160 @@
 const { PrismaClient } = require('@prisma/client')
 
 const prisma = new PrismaClient()
+const productData = [
+    {
+        name: 'Product 1',
+        price: 1999, // 19.99 USD
+        quantity: 15,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/0/1/p/7593/322/800/01/7593322800_6_1_8.jpg?t=1697019619048&imwidth=1920',
+        status: 'OnStock',
+        type: 'Normal',
+        isWished: false,
+        categoryId: 1,
+        userId: 1
+
+    },
+    {
+        name: 'Product 2',
+        price: 2999, // 29.99 USD
+        quantity: 20,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/0/1/p/7392/209/015/7392209015_2_10_8.jpg?t=1697019618126&imwidth=850',
+        status: 'OnSale',
+        type: 'NFT',
+        isWished: true,
+        categoryId: 2,
+        userId: 1
+    },
+    {
+        name: 'Product 3',
+        price: 3999, // 39.99 USD
+        quantity: 8,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/0/1/p/3676/304/407/3676304407_6_1_8.jpg?t=1697022675768&imwidth=1920',
+        status: 'OnStock',
+        type: 'Normal',
+        isWished: false,
+        categoryId: 2,
+        userId: 1
+    },
+    {
+        name: 'Product 4',
+        price: 4999, // 49.99 USD
+        quantity: 12,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/1/1/p/1348/240/002/01/1348240002_2_12_8.jpg?t=1697023273665&imwidth=850',
+        status: 'OutOfStock',
+        type: 'NFT',
+        isWished: true,
+        categoryId: 3,
+        userId: 1
+    },
+    {
+        name: 'Product 5',
+        price: 5999, // 59.99 USD
+        quantity: 25,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/1/1/p/1348/240/001/1348240001_2_12_8.jpg?t=1697023273360&imwidth=850',
+        status: 'OnStock',
+        type: 'Normal',
+        isWished: false,
+        categoryId: 1,
+        userId: 1
+    },
+    {
+        name: 'Product 6',
+        price: 6999, // 69.99 USD
+        quantity: 18,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/1/1/p/1204/240/100/02/1204240100_5_1_8.jpg?t=1696503012052&imwidth=1920',
+        status: 'OnSale',
+        type: 'NFT',
+        isWished: true,
+        categoryId: 2,
+        userId: 1
+    },
+    {
+        name: 'Product 7',
+        price: 7999, // 79.99 USD
+        quantity: 30,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/7861/525/015/7861525015_4_1_8.jpg?t=1690898952994&imwidth=750',
+        status: 'Soon',
+        type: 'Normal',
+        isWished: false,
+        categoryId: 1,
+        userId: 1
+    },
+    {
+        name: 'Product 8',
+        price: 8999, // 89.99 USD
+        quantity: 10,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/1/2/p/5053/240/040/5053240040_2_9_8.jpg?t=1695812525725&imwidth=750',
+        status: 'OnStock',
+        type: 'NFT',
+        isWished: true,
+        categoryId: 3,
+        userId: 1
+    },
+    {
+        name: 'Product 9',
+        price: 9999, // 99.99 USD
+        quantity: 14,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/4230/538/802/4230538802_2_6_8.jpg?t=1692268877096&imwidth=750',
+        status: 'OnStock',
+        type: 'Normal',
+        isWished: false,
+        categoryId: 2,
+        userId: 1
+    },
+    {
+        name: 'Product 10',
+        price: 10999, // 109.99 USD
+        quantity: 22,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/4238/501/518/4238501518_6_1_8.jpg?t=1685624657021&imwidth=750',
+        status: 'OnSale',
+        type: 'NFT',
+        isWished: true,
+        categoryId: 2,
+        userId: 1
+    },
+    {
+        name: 'Product 11',
+        price: 11999, // 119.99 USD
+        quantity: 9,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/7245/501/800/7245501800_2_6_8.jpg?t=1693921088283&imwidth=750',
+        status: 'OutOfStock',
+        type: 'Normal',
+        isWished: false,
+        categoryId: 1,
+        userId: 1
+    },
+    {
+        name: 'Product 12',
+        price: 12999, // 129.99 USD
+        quantity: 16,
+        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/7242/581/401/7242581401_4_1_8.jpg?t=1689321040987&imwidth=750',
+        status: 'OnStock',
+        type: 'NFT',
+        isWished: true,
+        categoryId: 1,
+        userId: 1
+    },
+];
+const categoryData = [
+    {
+        type: 'men',
+    },
+    {
+        type: 'women',
+    },
+    {
+        type: 'child',
+    },
+];
 
 async function main() {
-
+    // await prisma.category.createMany({
+    //     data: categoryData
+    // });
+    // await prisma.product.createMany({
+    //     data: productData
+    // });
 
     // ... you will write your Prisma Client queries here
 }
@@ -19,205 +170,86 @@ main()
 // Be Careful Before You Create Data See The Prisma Schema 
 const dummyUsers = [
     {
-        firstName: 'Alice',
-        lastName: 'Johnson',
-        profileImage: 'https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?auto=compress&cs=tinysrgb&w=600',
-        coverImage: 'https://mir-s3-cdn-cf.behance.net/projects/808/9b7b19144231085.Y3JvcCwxNzM1LDEzNTcsMTAzMSwyMDc1.jpg',
-        email: 'alice.johnson@example.com',
-        password: 'password123',
-        dateOfBirth: '1995-03-15',
-        type: 'regular',
-        followers: 50,
+        "firstName": "Alice",
+        "lastName": "Johnson",
+        "profileImage": "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "coverImage": "https://mir-s3-cdn-cf.behance.net/projects/808/9b7b19144231085.Y3JvcCwxNzM1LDEzNTcsMTAzMSwyMDc1.jpg",
+        "email": "alice.johnson@example.com",
+        "password": "password123",
+        "dateOfBirth": "1995-03-15",
+        "type": "regular",
+        "followers": 50
     },
     {
-        firstName: 'ZARA',
-        lastName: 'none',
-        profileImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG5Q2gj2tZBmWnEzfw72EhwSr_6olGYGewnDJluudTcNCNa9FaX4Ghln5khvJtbGnmNC0&usqp=CAU',
-        coverImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpjZ3XYsPUVA7MQCoBYBFw7t2Q8RIO9PKhcv0jsepEUzWnYKndsDF_fy70r5ZwvTtNt8&usqp=CAU',
-        email: 'bob.smith@example.com',
-        password: 'securepass456',
-        dateOfBirth: '1988-12-04',
-        type: 'brand',
-        followers: 20,
+        "firstName": "ZARA",
+        "lastName": "none",
+        "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG5Q2gj2tZBmWnEzfw72EhwSr_6olGYGewnDJluudTcNCNa9FaX4Ghln5khvJtbGnmNC0&usqp=CAU",
+        "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpjZ3XYsPUVA7MQCoBYBFw7t2Q8RIO9PKhcv0jsepEUzWnYKndsDF_fy70r5ZwvTtNt8&usqp=CAU",
+        "email": "bob.smith@example.com",
+        "password": "securepass456",
+        "dateOfBirth": "1988-12-04",
+        "type": "brand",
+        "followers": 20
     },
     {
-        firstName: 'Charlie',
-        lastName: 'Brown',
-        profileImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfIvCtTqhUF4RZxlmaRn1Vdd_ON0oYPHI37j9s0Fbi-klyyLmW59wRx1dykGv46SqZTnc&usqp=CAU',
-        coverImage: 'https://example.com/charlie_cover.jphttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0MZ9TRzLypmSwZNifNKAjBTyprGjvxL68FtBlxZWSAuy5p_R1C1LI4svsnyOpiIJENJ8&usqp=CAUg',
-        email: 'charlie.brown@example.com',
-        password: 'charliePass789',
-        dateOfBirth: '1992-07-20',
-        type: 'fashionista',
-        followers: 80,
+        "firstName": "Charlie",
+        "lastName": "Brown",
+        "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfIvCtTqhUF4RZxlmaRn1Vdd_ON0oYPHI37j9s0Fbi-klyyLmW59wRx1dykGv46SqZTnc&usqp=CAU",
+        "coverImage": "https://example.com/charlie_cover.jphttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0MZ9TRzLypmSwZNifNKAjBTyprGjvxL68FtBlxZWSAuy5p_R1C1LI4svsnyOpiIJENJ8&usqp=CAUg",
+        "email": "charlie.brown@example.com",
+        "password": "charliePass789",
+        "dateOfBirth": "1992-07-20",
+        "type": "fashionista",
+        "followers": 80
     },
     {
-        firstName: 'David',
-        lastName: 'Miller',
-        profileImage: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600',
-        coverImage: 'https://cdn.pixabay.com/photo/2023/09/27/03/00/residential-8278516_640.jpg',
-        email: 'david.miller@example.com',
-        password: 'davidPass123',
-        dateOfBirth: '1987-05-10',
-        type: 'regular',
-        followers: 60,
+        "firstName": "David",
+        "lastName": "Miller",
+        "profileImage": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "coverImage": "https://cdn.pixabay.com/photo/2023/09/27/03/00/residential-8278516_640.jpg",
+        "email": "david.miller@example.com",
+        "password": "davidPass123",
+        "dateOfBirth": "1987-05-10",
+        "type": "regular",
+        "followers": 60
     },
     {
-        firstName: 'P&B',
-        lastName: 'none',
-        profileImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBYabWdxV47C6HjRYAW72TeogFn_RIF75rypdt_NDNKpj5jzx6cYsnA2ze3lUdn1AQyxk&usqp=CAU',
-        coverImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXkEbmeuAxmPbv4prfubM_gqiY4f6Qf2h22AYTN_ISRMMOMjQEDQOpJNzVjK3EvAVop6E&usqp=CAU',
-        email: 'ella.davis@example.com',
-        password: 'ellaPass456',
-        dateOfBirth: '1996-09-25',
-        type: 'brand',
-        followers: 25,
+        "firstName": "P&B",
+        "lastName": "none",
+        "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBYabWdxV47C6HjRYAW72TeogFn_RIF75rypdt_NDNKpj5jzx6cYsnA2ze3lUdn1AQyxk&usqp=CAU",
+        "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXkEbmeuAxmPbv4prfubM_gqiY4f6Qf2h22AYTN_ISRMMOMjQEDQOpJNzVjK3EvAVop6E&usqp=CAU",
+        "email": "ella.davis@example.com",
+        "password": "ellaPass456",
+        "dateOfBirth": "1996-09-25",
+        "type": "brand",
+        "followers": 25
     },
     {
-        firstName: 'Fiona',
-        lastName: 'Anderson',
-        profileImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMV_V_M4tZ1XBwPtPVZfL8NOK6bdLD_3r9smpgLEvQBGhfwCRy8sImQZlLJ_at7UUvBrg&usqp=CAU',
-        coverImage: 'https://example.com/fiona_cover.jpg',
-        email: 'fiona.anderson@example.com',
-        password: 'fionaPass789',
-        dateOfBirth: '1991-11-08',
-        type: 'fashionista',
-        followers: 90,
+        "firstName": "Fiona",
+        "lastName": "Anderson",
+        "profileImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMV_V_M4tZ1XBwPtPVZfL8NOK6bdLD_3r9smpgLEvQBGhfwCRy8sImQZlLJ_at7UUvBrg&usqp=CAU",
+        "coverImage": "https://example.com/fiona_cover.jpg",
+        "email": "fiona.anderson@example.com",
+        "password": "fionaPass789",
+        "dateOfBirth": "1991-11-08",
+        "type": "fashionista",
+        "followers": 90
     },
     {
-        firstName: 'George',
-        lastName: 'Wilson',
-        profileImage: 'https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        coverImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPlZ-hstl2lXa9hh7I1sWp23rn_Qk0IQ5_809DQeVCIRA9__pQoQ7yuZXIo4UTNgMHUyM&usqp=CAU',
-        email: 'george.wilson@example.com',
-        password: 'georgePass123',
-        dateOfBirth: '1994-02-14',
-        type: 'regular',
-        followers: 70,
+        "firstName": "George",
+        "lastName": "Wilson",
+        "profileImage": "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPlZ-hstl2lXa9hh7I1sWp23rn_Qk0IQ5_809DQeVCIRA9__pQoQ7yuZXIo4UTNgMHUyM&usqp=CAU",
+        "email": "george.wilson@example.com",
+        "password": "georgePass123",
+        "dateOfBirth": "1994-02-14",
+        "type": "regular",
+        "followers": 70
     },
     // Add more dummy user data here
 ];
-const categoryData = [
-    {
-        type: 'men',
-    },
-    {
-        type: 'women',
-    },
-    {
-        type: 'child',
-    },
-];
-const productData = [
-    {
-        name: 'Product 1',
-        price: 1999, // 19.99 USD
-        quantity: 15,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/0/1/p/7593/322/800/01/7593322800_6_1_8.jpg?t=1697019619048&imwidth=1920',
-        status: 'OnStock',
-        type: 'Normal',
-        isWished: false,
-    },
-    {
-        name: 'Product 2',
-        price: 2999, // 29.99 USD
-        quantity: 20,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/0/1/p/7392/209/015/7392209015_2_10_8.jpg?t=1697019618126&imwidth=850',
-        status: 'OnSale',
-        type: 'NFT',
-        isWished: true,
-    },
-    {
-        name: 'Product 3',
-        price: 3999, // 39.99 USD
-        quantity: 8,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/0/1/p/3676/304/407/3676304407_6_1_8.jpg?t=1697022675768&imwidth=1920',
-        status: 'OnStock',
-        type: 'Normal',
-        isWished: false,
-    },
-    {
-        name: 'Product 4',
-        price: 4999, // 49.99 USD
-        quantity: 12,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/1/1/p/1348/240/002/01/1348240002_2_12_8.jpg?t=1697023273665&imwidth=850',
-        status: 'OutOfStock',
-        type: 'NFT',
-        isWished: true,
-    },
-    {
-        name: 'Product 5',
-        price: 5999, // 59.99 USD
-        quantity: 25,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/1/1/p/1348/240/001/1348240001_2_12_8.jpg?t=1697023273360&imwidth=850',
-        status: 'OnStock',
-        type: 'Normal',
-        isWished: false,
-    },
-    {
-        name: 'Product 6',
-        price: 6999, // 69.99 USD
-        quantity: 18,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/1/1/p/1204/240/100/02/1204240100_5_1_8.jpg?t=1696503012052&imwidth=1920',
-        status: 'OnSale',
-        type: 'NFT',
-        isWished: true,
-    },
-    {
-        name: 'Product 7',
-        price: 7999, // 79.99 USD
-        quantity: 30,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/7861/525/015/7861525015_4_1_8.jpg?t=1690898952994&imwidth=750',
-        status: 'Soon',
-        type: 'Normal',
-        isWished: false,
-    },
-    {
-        name: 'Product 8',
-        price: 8999, // 89.99 USD
-        quantity: 10,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/1/2/p/5053/240/040/5053240040_2_9_8.jpg?t=1695812525725&imwidth=750',
-        status: 'OnStock',
-        type: 'NFT',
-        isWished: true,
-    },
-    {
-        name: 'Product 9',
-        price: 9999, // 99.99 USD
-        quantity: 14,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/4230/538/802/4230538802_2_6_8.jpg?t=1692268877096&imwidth=750',
-        status: 'OnStock',
-        type: 'Normal',
-        isWished: false,
-    },
-    {
-        name: 'Product 10',
-        price: 10999, // 109.99 USD
-        quantity: 22,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/4238/501/518/4238501518_6_1_8.jpg?t=1685624657021&imwidth=750',
-        status: 'OnSale',
-        type: 'NFT',
-        isWished: true,
-    },
-    {
-        name: 'Product 11',
-        price: 11999, // 119.99 USD
-        quantity: 9,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/7245/501/800/7245501800_2_6_8.jpg?t=1693921088283&imwidth=750',
-        status: 'OutOfStock',
-        type: 'Normal',
-        isWished: false,
-    },
-    {
-        name: 'Product 12',
-        price: 12999, // 129.99 USD
-        quantity: 16,
-        image: 'https://static.pullandbear.net/2/photos//2023/I/0/2/p/7242/581/401/7242581401_4_1_8.jpg?t=1689321040987&imwidth=750',
-        status: 'OnStock',
-        type: 'NFT',
-        isWished: true,
-    },
-];
+
+
 const userChatRoomData = [
     {
         userId: 1,  // Replace with actual user IDs
