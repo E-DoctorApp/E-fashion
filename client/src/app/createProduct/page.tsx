@@ -36,7 +36,6 @@ const CreateProduct = () => {
   const [category, setCategory] = useState('');
   const [typeProd, setTypeProd] = useState('');
 
-//   let navigate = useNavigate()
 useEffect(() => {
   dispatch(getUser())
 },[])
