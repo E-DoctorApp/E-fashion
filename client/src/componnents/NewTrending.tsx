@@ -22,7 +22,8 @@ const NewTrending = ({ products }: { products: Product[] }) => {
   const [productList, setProductList] = useState<Product[]>([]);
 
   useEffect(() => {
-    setProductList(products.slice(0, 3));
+    const radnredProducts = products.sort(() => Math.random() - 0.5);
+    setProductList(radnredProducts.slice(0, 3));
   }, [products]);
 
   return (
@@ -89,10 +90,7 @@ const ProductCardContainer = () => {
     axios
       .get<Product[]>('http://localhost:5000/api/products/getAll')
       .then((response) => {
-        const prod = response.data.map((pro) => ({
-          ...pro,
-        }));
-        setProducts(prod);
+        setProducts(response.data);
       })
   }, []);
 
