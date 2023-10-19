@@ -23,6 +23,8 @@ import { AppDispatch } from '@/store'
 import { getUser } from '@/store/signinReduser'
 import Link from 'next/link'
 import NavBar from '@/componnents/NavBar'
+import FashionistaCard from '@/componnents/UpcomigCreators'
+
 // import { RootState, AppDispatch } from '../store'
 // import { fetchProducts } from '../components/ProductData/productData'
 
@@ -30,10 +32,12 @@ import NavBar from '@/componnents/NavBar'
 
 
 // import UpcomingBrands from '../components/UpcomingBrands'
+import UpcomingBrands from "@/componnents/UpcomingBrands"
 // import axios from 'axios'
 // import FashionCard from '../components/FashionistaCard'
 // import FashionistaCard from '../components/UpcomigCreators'
 // import ProductCardContainer from '../components/NewTrending'
+import ProductCardContainer from '@/componnents/NewTrending'
 
 interface UpcomingBrandsProps {
   users: User[];
@@ -133,8 +137,8 @@ const Home = () => {
                 <h1>Clothes are the Spirit of Fation</h1>
                 <p className='lightParag' >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <div className='buttons'>
-                  {/* <Link to="/explore" >  <button className='explore'>Explore Now</button></Link> */}
-                  {/* <Link to='/createProduct'><button className='create'>Create</button></Link> */}
+                  <Link href="/explore" >  <button className='explore'>Explore Now</button></Link>
+                  <Link href='/createProduct'><button className='create'>Create</button></Link>
                 </div>
                 <div id="statistics">
                   <span>
@@ -230,9 +234,7 @@ const Home = () => {
               </span>
               <span>
                 <div>
-
                 </div>
-
               </span>
               <span>
                 <h2>
@@ -242,7 +244,7 @@ const Home = () => {
               </span>
               {/* products */}
               <div className='productSection'>
-                {/* <ProductCardContainer /> */}
+                <ProductCardContainer />
               </div>
               <span>
                 <h2>
@@ -251,7 +253,7 @@ const Home = () => {
                 <p className='lightParag' >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               </span>
               <span>
-                {/* <FashionistaCard /> */}
+                <FashionistaCard />
               </span>
               <span>
                 <h2>
@@ -259,7 +261,7 @@ const Home = () => {
                 </h2>
                 <p className='lightParag' >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               </span>
-              {/* <UpcomingBrands /> */}
+              <UpcomingBrands />
               <span>
 
               </span>
@@ -285,7 +287,6 @@ const Home = () => {
               <button>Get Started</button>
             </div>
           </div>
-
         </div>
       </div>
       <Footer />
