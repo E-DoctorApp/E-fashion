@@ -33,7 +33,7 @@ function Streamer() {
   return (
     <div>
       <h2>Streaming</h2>
-      <video ref={videoRef} autoPlay muted playsInline ></video>
+      <video ref={videoRef} autoPlay muted playsInline >gfghgvh</video>
       <LiveChat/>
     </div>
   );
