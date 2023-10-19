@@ -5,11 +5,15 @@ import '../styles/ProductCard.css'
 
 interface Product {
   id: number;
+  User: any;
   name: string;
-  price: number;  
-  image:string;
-  category:string;
-  UserId:number;
+  price: number;
+  image: string;
+  category: string;
+  UserId: number;
+  type: "Normal" | "NFT"
+  categoryId: number
+  status: "OnStock" | "OutOfStock" | "OnSale" | "Soon"
 }
 
 const NewTrending = ({ products }: { products: Product[] }) => {
@@ -17,20 +21,20 @@ const NewTrending = ({ products }: { products: Product[] }) => {
   const [liked, setLiked] = useState(false);
   const [productList, setProductList] = useState<Product[]>([]);
 
-  // useEffect(() => {
-  //   setProductList(products.slice(0, 3));
-  // }, [products]);
+  useEffect(() => {
+    setProductList(products.slice(0, 3));
+  }, [products]);
 
   return (
     <div className='productCard-container'>
-      {/* {productList.map((product) => (
+      {productList.map((product) => (
         <div className='productCard' key={product.id}>
           <span className='imgContainer'>
             <img src={product.image} alt='' />
           </span>
           <div className='productInfo'>
             <div className='leftSection'>
-              <h4 className='top'>@publisher</h4>
+              <h4 className='top'>{product.User.firstName + " " + product.User.lastName}</h4>
               <h4 className='bottom'>{product.name}</h4>
             </div>
             <div className='rightSection'>
@@ -74,23 +78,23 @@ const NewTrending = ({ products }: { products: Product[] }) => {
             </button>
           </div>
         </div>
-      ))} */}
+      ))}
     </div>
   );
 };
-const ProductCardContainer= () => {
+const ProductCardContainer = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get<Product[]>('http://localhost:5000/api/product/allProduct')
-  //     .then((response) => {
-  //       const prod = response.data.map((pro) => ({
-  //         ...pro,
-  //       }));
-  //       setProducts(prod);
-  //     })
-  // }, []);
+  useEffect(() => {
+    axios
+      .get<Product[]>('http://localhost:5000/api/products/getAll')
+      .then((response) => {
+        const prod = response.data.map((pro) => ({
+          ...pro,
+        }));
+        setProducts(prod);
+      })
+  }, []);
 
   return (
     <div className='productCard-container'>

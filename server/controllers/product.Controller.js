@@ -2,7 +2,7 @@ const prisma = require('../database/index');
 
 module.exports.getAllProduct = async (req, res) => {
     try {
-        const products = await prisma.product.findMany({})
+        const products = await prisma.product.findMany({ include: { User: true } })
         res.json(products)
     } catch (error) {
         console.log(error);
@@ -11,7 +11,7 @@ module.exports.getAllProduct = async (req, res) => {
 }
 module.exports.getAllProductByUser = async (req, res) => {
     try {
-        const products = await prisma.product.findMany({where:{userId: +req.params.userId}})
+        const products = await prisma.product.findMany({ where: { userId: +req.params.userId } })
         res.json(products)
     } catch (error) {
         console.log(error);
@@ -20,7 +20,7 @@ module.exports.getAllProductByUser = async (req, res) => {
 }
 module.exports.getOneProduct = async (req, res) => {
     try {
-        const product = await prisma.product.findUnique({where:{id: +req.params.id}})
+        const product = await prisma.product.findUnique({ where: { id: +req.params.id } })
         res.json(product)
     } catch (error) {
         console.log(error);
@@ -29,7 +29,7 @@ module.exports.getOneProduct = async (req, res) => {
 }
 module.exports.addProduct = async (req, res) => {
     try {
-        const product = await prisma.product.create({data: req.body})
+        const product = await prisma.product.create({ data: req.body })
         res.json(product)
     } catch (error) {
         console.log(error);
@@ -38,7 +38,7 @@ module.exports.addProduct = async (req, res) => {
 }
 module.exports.updateProduct = async (req, res) => {
     try {
-        const product = await prisma.product.update({where:{id: +req.params.id},data: req.body})
+        const product = await prisma.product.update({ where: { id: +req.params.id }, data: req.body })
         res.json(product)
     } catch (error) {
         console.log(error);
@@ -47,7 +47,7 @@ module.exports.updateProduct = async (req, res) => {
 }
 module.exports.removeProduct = async (req, res) => {
     try {
-        const product = await prisma.product.delete({where:{id: +req.params.id}})
+        const product = await prisma.product.delete({ where: { id: +req.params.id } })
         res.json(product)
     } catch (error) {
         console.log(error);
@@ -56,7 +56,7 @@ module.exports.removeProduct = async (req, res) => {
 }
 module.exports.getAllProductByStatus = async (req, res) => {
     try {
-        const products = await prisma.product.findMany({where:{status: req.params.status}})
+        const products = await prisma.product.findMany({ where: { status: req.params.status } })
         res.json(products)
     } catch (error) {
         console.log(error);
@@ -65,7 +65,7 @@ module.exports.getAllProductByStatus = async (req, res) => {
 }
 module.exports.getAllProductByPrice = async (req, res) => {
     try {
-        const products = await prisma.product.findMany({where:{price: +req.params.price}})
+        const products = await prisma.product.findMany({ where: { price: +req.params.price } })
         res.json(products)
     } catch (error) {
         console.log(error);
@@ -74,7 +74,7 @@ module.exports.getAllProductByPrice = async (req, res) => {
 }
 module.exports.getAllProductByCategories = async (req, res) => {
     try {
-        const products = await prisma.product.findMany({where:{categoryId: +req.params.categories}})
+        const products = await prisma.product.findMany({ where: { categoryId: +req.params.categories } })
         res.json(products)
     } catch (error) {
         console.log(error);
