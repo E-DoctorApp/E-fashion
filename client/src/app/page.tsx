@@ -31,7 +31,6 @@ import FashionistaCard from '@/componnents/UpcomigCreators'
 // import { fetchUsers } from '../components/UsersData/UsersData'
 
 
-// import UpcomingBrands from '../components/UpcomingBrands'
 import UpcomingBrands from "@/componnents/UpcomingBrands"
 // import axios from 'axios'
 // import FashionCard from '../components/FashionistaCard'
@@ -136,9 +135,9 @@ const Home = () => {
               <span className='leftSection'>
                 <h1>Clothes are the Spirit of Fation</h1>
                 <p className='lightParag' >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div className='buttons'>
-                  <Link href="/explore" >  <button className='explore'>Explore Now</button></Link>
-                  <Link href='/createProduct'><button className='create'>Create</button></Link>
+                <div className='buttons' style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+                  <Link href="/explore" >  <button style={{ padding: "0.5rem 5rem", background: "#6C5DD3", borderRadius: "1rem", border: "none", color: "white" }}>Explore Now</button></Link>
+                  <Link href='/createProduct'><button style={{ padding: "1rem 5rem", background: "#6C5DD3", borderRadius: "1rem", border: "none", color: "white" }}>Create</button></Link>
                 </div>
                 <div id="statistics">
                   <span>
