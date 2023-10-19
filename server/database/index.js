@@ -147,6 +147,156 @@ const categoryData = [
         type: 'child',
     },
 ];
+// const userChatRoomData = [
+//     {
+//         userId: 1,  // Replace with actual user IDs
+//         chatRoomId: 1,  // Replace with actual chat room IDs
+//     },
+//     {
+//         userId: 2,
+//         chatRoomId: 2,
+//     },
+//     {
+//         userId: 3,
+//         chatRoomId: 3,
+//     },
+//     {
+//         userId: 4,
+//         chatRoomId: 4,
+//     },
+//     {
+//         userId: 5,
+//         chatRoomId: 5,
+//     },
+//     {
+//         userId: 6,
+//         chatRoomId: 6,
+//     },
+//     {
+//         userId: 7,
+//         chatRoomId: 7,
+//     },
+//     {
+//         userId: 8,
+//         chatRoomId: 8,
+//     },
+//     {
+//         userId: 9,
+//         chatRoomId: 9,
+//     },
+//     {
+//         userId: 10,
+//         chatRoomId: 10,
+//     },
+//     {
+//         userId: 11,
+//         chatRoomId: 11,
+//     },
+//     {
+//         userId: 12,
+//         chatRoomId: 12,
+//     },
+// ];
+const messageData = [
+    {
+        content: 'Hello!',
+        chatRoomId: 1, // Replace with the actual chat room ID
+        sender: 1, // Replace with the actual user ID
+    },
+    {
+        content: 'Hi there!',
+        chatRoomId: 1, // Replace with the actual chat room ID
+        sender: 2, // Replace with the actual user ID
+    },
+    {
+        content: 'How are you?',
+        chatRoomId: 2, // Replace with the actual chat room ID
+        sender: 3, // Replace with the actual user ID
+    },
+    {
+        content: 'I\'m doing well, thanks!',
+        chatRoomId: 2, // Replace with the actual chat room ID
+        sender: 4, // Replace with the actual user ID
+    },
+    {
+        content: 'What\'s new?',
+        chatRoomId: 3, // Replace with the actual chat room ID
+        sender: 5, // Replace with the actual user ID
+    },
+    {
+        content: 'Not much, just working on a project.',
+        chatRoomId: 3, // Replace with the actual chat room ID
+        sender: 6, // Replace with the actual user ID
+    },
+    {
+        content: 'Do you need any help?',
+        chatRoomId: 4, // Replace with the actual chat room ID
+        sender: 7, // Replace with the actual user ID
+    },
+    {
+        content: 'Sure, that would be great!',
+        chatRoomId: 4, // Replace with the actual chat room ID
+        sender: 7 // Replace with the actual user ID
+    },
+    {
+        content: 'Let\'s schedule a meeting.',
+        chatRoomId: 5, // Replace with the actual chat room ID
+        sender: 7 // Replace with the actual user ID
+    },
+    {
+        content: 'Sounds good. How about next Wednesday?',
+        chatRoomId: 5, // Replace with the actual chat room ID
+        sender: 7, // Replace with the actual user ID
+    },
+    {
+        content: 'Meeting confirmed!',
+        chatRoomId: 6, // Replace with the actual chat room ID
+        sender: 7, // Replace with the actual user ID
+    },
+    {
+        content: 'Great! See you then!',
+        chatRoomId: 6, // Replace with the actual chat room ID
+        sender: 7, // Replace with the actual user ID
+    },
+];
+const chatRoomData = [
+    {
+        name: 'Room 1',
+    },
+    {
+        name: 'Room 2',
+    },
+    {
+        name: 'Room 3',
+    },
+    {
+        name: 'Room 4',
+    },
+    {
+        name: 'Room 5',
+    },
+    {
+        name: 'Room 6',
+    },
+    {
+        name: 'Room 7',
+    },
+    {
+        name: 'Room 8',
+    },
+    {
+        name: 'Room 9',
+    },
+    {
+        name: 'Room 10',
+    },
+    {
+        name: 'Room 11',
+    },
+    {
+        name: 'Room 12',
+    },
+];
 
 async function main() {
     // await prisma.category.createMany({
@@ -155,6 +305,12 @@ async function main() {
     // await prisma.product.createMany({
     //     data: productData
     // });
+    await prisma.chatRoom.createMany({
+        data : chatRoomData
+    })
+    await prisma.message.createMany({
+        data : messageData
+    })
 
     // ... you will write your Prisma Client queries here
 }
@@ -250,156 +406,8 @@ const dummyUsers = [
 ];
 
 
-const userChatRoomData = [
-    {
-        userId: 1,  // Replace with actual user IDs
-        chatRoomId: 1,  // Replace with actual chat room IDs
-    },
-    {
-        userId: 2,
-        chatRoomId: 2,
-    },
-    {
-        userId: 3,
-        chatRoomId: 3,
-    },
-    {
-        userId: 4,
-        chatRoomId: 4,
-    },
-    {
-        userId: 5,
-        chatRoomId: 5,
-    },
-    {
-        userId: 6,
-        chatRoomId: 6,
-    },
-    {
-        userId: 7,
-        chatRoomId: 7,
-    },
-    {
-        userId: 8,
-        chatRoomId: 8,
-    },
-    {
-        userId: 9,
-        chatRoomId: 9,
-    },
-    {
-        userId: 10,
-        chatRoomId: 10,
-    },
-    {
-        userId: 11,
-        chatRoomId: 11,
-    },
-    {
-        userId: 12,
-        chatRoomId: 12,
-    },
-];
-const chatRoomData = [
-    {
-        name: 'Room 1',
-    },
-    {
-        name: 'Room 2',
-    },
-    {
-        name: 'Room 3',
-    },
-    {
-        name: 'Room 4',
-    },
-    {
-        name: 'Room 5',
-    },
-    {
-        name: 'Room 6',
-    },
-    {
-        name: 'Room 7',
-    },
-    {
-        name: 'Room 8',
-    },
-    {
-        name: 'Room 9',
-    },
-    {
-        name: 'Room 10',
-    },
-    {
-        name: 'Room 11',
-    },
-    {
-        name: 'Room 12',
-    },
-];
-const messageData = [
-    {
-        content: 'Hello!',
-        chatRoomId: 1, // Replace with the actual chat room ID
-        sender: 1, // Replace with the actual user ID
-    },
-    {
-        content: 'Hi there!',
-        chatRoomId: 1, // Replace with the actual chat room ID
-        sender: 2, // Replace with the actual user ID
-    },
-    {
-        content: 'How are you?',
-        chatRoomId: 2, // Replace with the actual chat room ID
-        sender: 3, // Replace with the actual user ID
-    },
-    {
-        content: 'I\'m doing well, thanks!',
-        chatRoomId: 2, // Replace with the actual chat room ID
-        sender: 4, // Replace with the actual user ID
-    },
-    {
-        content: 'What\'s new?',
-        chatRoomId: 3, // Replace with the actual chat room ID
-        sender: 5, // Replace with the actual user ID
-    },
-    {
-        content: 'Not much, just working on a project.',
-        chatRoomId: 3, // Replace with the actual chat room ID
-        sender: 6, // Replace with the actual user ID
-    },
-    {
-        content: 'Do you need any help?',
-        chatRoomId: 4, // Replace with the actual chat room ID
-        sender: 7, // Replace with the actual user ID
-    },
-    {
-        content: 'Sure, that would be great!',
-        chatRoomId: 4, // Replace with the actual chat room ID
-        sender: 8, // Replace with the actual user ID
-    },
-    {
-        content: 'Let\'s schedule a meeting.',
-        chatRoomId: 5, // Replace with the actual chat room ID
-        sender: 9, // Replace with the actual user ID
-    },
-    {
-        content: 'Sounds good. How about next Wednesday?',
-        chatRoomId: 5, // Replace with the actual chat room ID
-        sender: 10, // Replace with the actual user ID
-    },
-    {
-        content: 'Meeting confirmed!',
-        chatRoomId: 6, // Replace with the actual chat room ID
-        sender: 11, // Replace with the actual user ID
-    },
-    {
-        content: 'Great! See you then!',
-        chatRoomId: 6, // Replace with the actual chat room ID
-        sender: 12, // Replace with the actual user ID
-    },
-];
+
+
 const postData = [
     {
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3erTK11PJLIDxYltJBnvMWGYhs98QkYdlF0W7tMn-hsUdn-ncqc_FyCo7fh-jBroybAs&usqp=CAU',

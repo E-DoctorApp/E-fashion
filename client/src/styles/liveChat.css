@@ -1,5 +1,5 @@
 .chat-box{
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.164);
     width: 25%;
     height: 50vh;
     display: flex;
@@ -7,7 +7,8 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 1rem;
-    
+    border: 1px solid white;
+    border-radius: 20px;
 }
 .one-message{
     display: flex;
@@ -39,8 +40,37 @@
     gap: 1rem;
     align-items: flex-start;
     width: 100%;
+    overflow-y: scroll;
 }
 .chat-header{
     font-size: 20px;
     font-weight: bold;
+}
+.input-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background-color: rgb(101, 97, 97);
+    height: 5vh;
+    border-radius: 25px;
+}
+.message-input{
+    width: 60%;
+    height: 4vh;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+.send-button{
+    background-color: blueviolet;
+    width: 15%;
+    height: 3vh;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
