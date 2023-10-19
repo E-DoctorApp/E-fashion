@@ -23,8 +23,11 @@ const LiveChat = () => {
         <div className='input-section'>
         <div className='image-frame2'>
                 <Image className='circle-image' src={img} alt="" />
-                <input type="text" />
             </div>
+                <input className='message-input' type="text" placeholder='Write Your Message'/>
+                <div className='send-button'>
+                    <span>Send</span>
+                </div>
         </div>
     </div>
   )

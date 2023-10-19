@@ -44,3 +44,26 @@
     font-size: 20px;
     font-weight: bold;
 }
+.input-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background-color: blueviolet;
+    height: 5vh;
+    border-radius: 25px;
+}
+.message-input{
+    width: 60%;
+    height: 4vh;
+}
+.send-button{
+    background-color: aqua;
+    width: 15%;
+    height: 3vh;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
