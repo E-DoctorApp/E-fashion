@@ -36,7 +36,7 @@
 }
 .mesaage-container{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
     width: 100%;

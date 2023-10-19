@@ -1,6 +1,7 @@
 const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
+const prisma = require("./database/index");
 
 const httpServer = http.createServer();
 
@@ -23,6 +24,7 @@ io.on("connection", (socket) => {
     console.log(data, "DATA");
     //This will send a message to a specific room ID
     socket.emit("receive_msg", data);
+    // prisma.message.create({data })
   });
 
 //   socket.on("disconnect", () => {
