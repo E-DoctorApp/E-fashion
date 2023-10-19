@@ -11,18 +11,18 @@ function Streamer() {
 
   useEffect(() => {
     // const peer = new Peer();
-    
+
     navigator.mediaDevices.getUserMedia({ video: true, audio: true })
       .then((stream) => {
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
-        
-        }
-    //    peer.call('signal', stream);
-    //       console.log('video');
-       
 
-   
+        }
+        //    peer.call('signal', stream);
+        //       console.log('video');
+
+
+
       })
       .catch((error) => {
         console.error('Error accessing media devices: ', error);
