@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import '../../styles/clientDard.css';
+import Image from "next/image";
 // import axios from "axios";
 // import "../styles/clientDard.css";
 // import NavBar from "./NavBar";
@@ -90,6 +91,33 @@ const ClientCard = ({ users }: { users: User[] }) => {
             </div>
         );
     };
+    return (
+        <div className="clientCard-container">
+          {brandUsers.map((user) => (
+            <div key={user.id} className="clientCard ">
+              <div className="clientCardSha shadow">
+                <Image className="immgg" src={user.image} alt="" />
+                <div className="images flex flex-c justify-center alg-center">
+                  <div className="text-log">{user.name}</div>
+                </div>
+                <div className="parag">
+                  <p className="brand-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                {user.following ? (
+                  <button className="butt" onClick={() => handleUnfollow(user)}>
+                    <div className="butt-wrapper">Unfollow</div>
+                  </button>
+                ) : (
+                  <button className="butt" onClick={() => handleFollow(user)}>
+                    <div className="butt-wrapper">+ Follow </div>
+                  </button>
+                  
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      );
 }
 
 const BrandCard = () => {
@@ -107,7 +135,7 @@ const BrandCard = () => {
 
     return (
         <div>
-            {/* <ClientCard users={brands} /> */}
+            <ClientCard users={brands} />
         </div>
     );
 };
