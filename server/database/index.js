@@ -16,7 +16,7 @@ main()
         console.error(e)
         process.exit(1)
     })
-
+// Be Careful Before You Create Data See The Prisma Schema 
 const dummyUsers = [
     {
         firstName: 'Alice',
