@@ -4,7 +4,7 @@ const app = express();
 require('dotenv').config()
 // require('./database/index')
 const userRouter = require('./routers/user.router')
-
+const categoriesRouter = require('./routers/categories.router')
 
 const productRouter = require('./routers/product.router')
 
@@ -19,7 +19,7 @@ app.use("/api/users", userRouter);
 
 
 app.use("/api/products", productRouter);
-
+app.use("/api/categories",categoriesRouter); 
 app.use("/api/posts", postRouter)
 app.use("/api/wishlists", wishlistRouter);
 

@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React,{useState, useEffect} from "react";
 import asset from '../../../public/Assests/images/Brandpage/unsplash_DbOdCSoefsg.png'
 // import asset1 from '../../../public/Assests/images/Brandpage/albert-dera-ILip77SbmOE-unsplash 1.png'
 // import tick from '../../../public/Assests/images/Brandpage/tick.svg'
@@ -19,10 +19,15 @@ import Footer from "../../componnents/Footer";
 
 
 function page() {
-    const handleFilterByStatus =(status:String)=>{
-        axios.get(`http://localhost:5000/api/products/getAllByStatus/${status}`)
-        .then((response)=>{
+    const [products, setProducts] = useState([]);
+    const [category, setCategory] = useState("");
     
+    const fetchProductsByCategory =(category:String)=>{
+        axios.get(`http://localhost:5000/api/products/getAllByCategories/${category}`)
+        .then((response)=>{
+            console.log(response.data);
+            
+            setProducts(response.data);
         })
         .catch((error)=>{
             console.log(error);
@@ -357,7 +362,14 @@ function page() {
                             <Image className="vector-6" alt="Vector" src={asset} />
                         </div>
                         <div className="group-29">
-                            <div className="text-wrapper-42">Categories</div>
+                            <div className="text-wrapper-42">
+                                <select name="" id="" value={category} onChange={(e)=>setCategory(e.target.value)}>
+                                    <option value="0">Select Category</option>
+                                    <option value="1">men</option>
+                                    <option value="2">women</option>
+                                    <option value="3">child</option>
+                                </select>
+                            </div>
                             <Image className="vector-6" alt="Vector" src={asset} />
                         </div>
                         <div className="group-30">
@@ -365,7 +377,7 @@ function page() {
                             <Image className="vector-6" alt="Vector" src={asset} />
                         </div>
                         <div className="group-31">
-                            <div className="text-wrapper-43">Filter</div>
+                            <div className="text-wrapper-43" onClick={()=>fetchProductsByCategory(category)} >Filter</div>
                             <Image className="group-32" alt="Group" src={asset} />
                         </div>
                     </div>
