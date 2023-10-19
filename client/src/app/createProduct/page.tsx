@@ -74,18 +74,18 @@ console.log(user);
      <div className='create-product-container'>
       <input className="form-input" placeholder='Name' value={name} onChange={(event) => setName(event.target.value)} />
         <select id='select' className="form-input" value={category} onChange={(event) => setCategory(event.target.value)}>
-             <option value="">Select a category</option>
-             <option value="men">Men</option>
-             <option value="women">Women</option>
-             <option value="kids">Kids</option>
-             <option value="other">Other</option>
+             <option className='option-create-product' value="">Select a category</option>
+             <option className='option-create-product' value="men">Men</option>
+             <option className='option-create-product' value="women">Women</option>
+             <option className='option-create-product' value="kids">Kids</option>
+             <option className='option-create-product' value="other">Other</option>
            </select>
            <input className="form-input" placeholder='Price' type="text" value={price} onChange={(event) => setPrice(event.target.value)} />
            <input className="form-input" placeholder='Quantity' type="text" value={quantity} onChange={(event) => setQuantity(event.target.value)} />
     <select id='select' className="form-input" value={typeProd} onChange={(event) => setTypeProd(event.target.value)}>
-             <option  >Select Product Type</option>
-             <option value="Normal">Product</option>
-             <option value="NFT">NFT</option>
+             <option className='option-create-product'  >Select Product Type</option>
+             <option className='option-create-product' value="Normal">Product</option>
+             <option className='option-create-product' value="NFT">NFT</option>
            </select>
            <div>
       <label htmlFor="inputTag">
