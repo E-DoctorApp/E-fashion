@@ -117,9 +117,7 @@ const EditProfile: FunctionComponent = () => {
             // UpdateUser(user.id, response.data["secure_url"])
         }).catch((error) => {
             console.log(error);
-
         })
-
     }
     //   localStorage.setItem('user', JSON.stringify(user));
     return (
