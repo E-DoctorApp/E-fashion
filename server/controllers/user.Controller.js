@@ -88,7 +88,6 @@ module.exports.getOneUser = async (req, res) => {
 module.exports.getUserByType = async (req, res) => {
     try {
         const response = await prisma.user.findMany({ where: { type: req.params.type } })
-        console.log(response);
         res.json(response);
     } catch (error) {
         console.log(error);
