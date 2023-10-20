@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import asset from "../../../public/Assests/images/BrandStorepage/+.png"
 import cardImg from "../../../public/Assests/images/cardImg.png"
-import liba3dha from "../../../public/Assests/images/Rectang 33.png" 
+import liba3dha from "../../../public/Assests/images/Rectang 33.png"
 import ellipse from "../../../public/Assests/images/Ellipse 286.png"
 // import vector from "../../../public/Assests/images/Vector.svg"
 import taswira from "../../../public/Assests/images/Ellipse 251.png"
@@ -17,6 +17,7 @@ import Footer from "../../componnents/Footer";
 // import { Link, useLocation } from "react-router-dom";
 import { number } from "prop-types";
 import Image from "next/image";
+import ProductCardContainer from "../../componnents/NewTrending"
 
 
 interface Product {
@@ -52,21 +53,21 @@ const BrandStorePage = (props: any) => {
 
                         <div className="overlap-2">
                             <div className="overlap-2">
-                                <div className="item">
+                                {/* <div className="item">
                                     <div className="overlap-group-2">
-                                        {/* <div className="text-wrapper-14">{data.name}</div> */}
+                                        <div className="text-wrapper-14">{data.name}</div>
                                         <div className="text-wrapper-15">Lorem Ipsum</div>
-                                        {/* <div className="text-wrapper-16">{data.price}</div> */}
+                                        <div className="text-wrapper-16">{data.price}</div>
                                         <Image width={500} height={500} className="rectangle" alt="Rectangle" src={cardImg} />
                                         <div className="text-wrapper-17">Current Bid</div>
                                         <div className="group-4">
                                             <div className="frame-2">
-                                                {/* <Link to='/error'><div className="text-wrapper-18">Buy Now</div></Link> */}
+                                                <Link to='/error'><div className="text-wrapper-18">Buy Now</div></Link>
                                             </div>
                                             <span className="fa" style={{ color: "red", fontSize: "2rem" }}>&#xf004;</span>
                                         </div>
-                                    </div> 
-                                </div>
+                                    </div>
+                                </div> */}
                                 <div className="overlap-3">
                                     <div className="group-5">
                                         <div className="group-wrapper">
@@ -167,7 +168,7 @@ const BrandStorePage = (props: any) => {
                             <div className="group-19">
                                 <div className="text-wrapper-28">Exclusive</div>
                                 {/* <Image width={100} height={100} className="mask-group-2" alt="Mask group" src="/mask-group-3.png" /> */}
-                                <i className="fa-solid fa-crown" style={{color: "#fbfcfe"}}></i>
+                                <i className="fa-solid fa-crown" style={{ color: "#fbfcfe" }}></i>
                             </div>
                         </div>
                         <div className="group-20">

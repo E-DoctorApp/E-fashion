@@ -5,7 +5,7 @@ require('dotenv').config()
 // require('./database/index')
 const userRouter = require('./routers/user.router')
 const categoriesRouter = require('./routers/categories.router')
-
+const messagesRouter = require('./routers/message.router')
 const productRouter = require('./routers/product.router')
 
 const postRouter = require('./routers/post.router')
@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use("/api/users", userRouter);
 
-
+app.use('/api/messages',messagesRouter);
 app.use("/api/products", productRouter);
 app.use("/api/categories",categoriesRouter); 
 app.use("/api/posts", postRouter)

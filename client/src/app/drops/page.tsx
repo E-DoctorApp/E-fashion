@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/drops.css'
+import '../../styles/drops.css'
 // import BrandDropCard from '../../componnents/BrandDropCard'
 import NavBar from '../../componnents/NavBar'
 import Footer from '../../componnents/Footer'
