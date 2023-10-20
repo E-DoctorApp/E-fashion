@@ -64,7 +64,7 @@ const EditProfile: FunctionComponent = () => {
     useEffect(() => {
         dispatch(getUser())
         dispatch(fetchposts(user.id))
-    }, [user.id,update])
+    }, [user.id, update])
 
     // useEffect(() => {
     //     dispatch(getUser())
@@ -110,20 +110,14 @@ const EditProfile: FunctionComponent = () => {
         const formData = new FormData()
         formData.append("file", e.target.files[0])
         formData.append("upload_preset", "oztadvnr")
-
         await axios.post("https://api.cloudinary.com/v1_1/dl4qexes8/upload", formData).then((response) => {
             updateProfilePhoto({ profileImage: response.data["secure_url"] })
-
-
             // setImageUser(response.data["secure_url"])
-
             // setUser({ id: user.id, name: user.name, email: user.email, image: response.data["secure_url"], password: user.password, dateOfBirth: user.dateOfBirth })
-
             // UpdateUser(user.id, response.data["secure_url"])
-
-
         }).catch((error) => {
-            throw error
+            console.log(error);
+
         })
 
     }
