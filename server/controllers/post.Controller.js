@@ -3,10 +3,9 @@ const prisma = require('../database/index');
 
 module.exports.getAllPostsByUser = async (req, res) => {
     try {
-        const posts = await prisma.post.findMany({ where: { userId: + req.params.userId } })
+        const posts = await prisma.post.findMany({ where: { userId: + req.params.userId }, include: { User: true } });
         res.json(posts)
     } catch (error) {
-        console.log(error);
         res.json(error)
     }
 }
@@ -15,7 +14,6 @@ module.exports.createPost = async (req, res) => {
         const post = await prisma.post.create({ data: req.body })
         res.json(post)
     } catch (error) {
-        console.log(error);
         res.json(error)
     }
 }

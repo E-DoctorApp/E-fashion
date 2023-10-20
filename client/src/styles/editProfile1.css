@@ -217,11 +217,11 @@
 }
 
 .edit-profile-page .edit-cover-image {
-  height: 49px;
-  left: 971px;
+  /* height: 60px; */
+  right: 10px;
   position: absolute;
-  top: 287px;
-  width: 49px;
+  top: 320px;
+  /* width: 50px; */
 }
 
 .edit-profile-page .profile-pic {
@@ -506,7 +506,7 @@ grid-gap: 10px;
 .edit-profile-page .feed-sec {
   height: 631px;
   left: 575px;
-  position: absolute;
+  position: relative;
   top: 769px;
   width: 674px;
 }

@@ -7,6 +7,7 @@ import getUser from './userSlice'
 import productReducer from "./productData"
 import chatReducer from './chatSlice';
 import messagesSlice from './messagesSlice';
+import postReducer from "@/store/AllPostsSlice"
 
 
 export const store = configureStore({
@@ -14,6 +15,7 @@ export const store = configureStore({
     signUp: signUpReducer,
     ...signinReduser,
     products: productReducer,
+    posts: postReducer,
     chat: chatReducer,
     messages: messagesSlice,
     ...getUserSlice,

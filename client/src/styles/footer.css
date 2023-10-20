@@ -1,11 +1,12 @@
 .in-the-midle{
+    position: relative;
     margin-left: 10%;
     margin-top: 5%;
 }
 .footer .group-18 {
     height: 202px;
     left: 122px;
-    position: flex;
+    position: relative;
     top: 500px;
     width: 1199px;
 }
@@ -167,4 +168,7 @@
     top: 150px;
     width: 270px;
     
+}
+.footer {
+    position: relative;
 }

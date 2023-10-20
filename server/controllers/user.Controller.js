@@ -95,6 +95,19 @@ module.exports.getUserByType = async (req, res) => {
 
 }
 
+module.exports.updatePhoto = async (req, res) => {
+    try {
+        const response = await prisma.user.update({
+            where: { id: +req.params.id }, data: {
+                ...req.body
+            }
+        })
+        res.json(response);
+    } catch (error) {
+        res.json(error);
+    }
+}
+
 // module.exports.updateLists = async (req, res) => {
 //     try {
 //         const update = await User.update(req.body, {
@@ -106,10 +119,11 @@ module.exports.getUserByType = async (req, res) => {
 //     }
 // };
 
+
 // module.exports.updateUserInfo = async (req, res) => {
 //     try {
 //         const { old, currentId, newPassword, adress, name, lastName, email } = req.body;
-//         const { password } = await User.findOne({ where: { id: currentId } });
+//         const { password } = await prisma.user.findUnique({ where: { id: currentId } });
 //         bcrypt
 //             .compare(old, password)
 //             .then((passCheck) => {
@@ -117,10 +131,11 @@ module.exports.getUserByType = async (req, res) => {
 //                     bcrypt
 //                         .hash(newPassword, 10)
 //                         .then((newHashedPassword) => {
-//                             User.update(
-//                                 { password: newHashedPassword, name, adress, lastName, email },
-//                                 { where: { id: currentId } }
-//                             )
+//                             prisma.user
+//                                 .update(
+//                                     { password: newHashedPassword, name, adress, lastName, email },
+//                                     { where: { id: currentId } }
+//                                 )
 //                                 .then((response) => {
 //                                     const token = jwt.sign(
 //                                         {

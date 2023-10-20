@@ -83,7 +83,7 @@ const LiveChat = () => {
                     return (
                         <div ref={lastMessage} key={i} className='one-message'>
                             <div className='image-frame'>
-                                <img className='circle-image' src={msg.User.profileImage} alt="" />
+                                <img className='circle-image' src={msg.User?.profileImage} alt="" />
                             </div>
                             <span className='message-content'>{msg.content}</span>
                         </div>
@@ -92,7 +92,7 @@ const LiveChat = () => {
             </div>
             <div className='input-section'>
                 <div className='image-frame2'>
-                    <img className='circle-image' src={user.profileImage} alt="" />
+                    <img className='circle-image' src={user?.profileImage} alt="" />
                 </div>
                 <input
                     onKeyUp={(e:any) => {
