@@ -20,6 +20,9 @@ interface IMsgDataTypes {
 
 
 const LiveChat = () => {
+    function onlyUnique(value:any, index:any, array:any) {
+        return array.indexOf(value) === index;
+      }
     const socket: any = io("http://localhost:3003")
     const chatRoomId = 3
     const dispatch: AppDispatch = useDispatch()
@@ -27,7 +30,8 @@ const LiveChat = () => {
     const lastMessage: any = useRef(null)
     const [currentMsg, setCurrentMsg] = useState("");
     const [chat, setChat] = useState<IMsgDataTypes[]>([]);
-
+      console.log(chat);
+      
     useEffect(() => {
         dispatch(getUser())
         getAllMessages()
@@ -76,7 +80,7 @@ const LiveChat = () => {
         socket.on("receive_msg", (data: IMsgDataTypes) => {
             setChat(previous => [...previous, data]);
         });
-    }, [socket]);
+    }, []);
     useEffect(() => {
         lastMessage.current?.scrollIntoView({ behavior: 'smooth' });
     }, [chat.length]);
@@ -97,7 +101,7 @@ const LiveChat = () => {
             </div>
             <div className='input-section'>
                 <div className='image-frame2'>
-                    <img className='circle-image' src={user.profileImage} alt="" />
+                    <img className='circle-image' src={user?.profileImage} alt="" />
                 </div>
                 <input
                     onKeyUp={(e:any) => {
