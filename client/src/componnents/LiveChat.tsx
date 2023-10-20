@@ -19,20 +19,20 @@ interface IMsgDataTypes {
 
 const LiveChat = () => {
     const socket: any = io("http://localhost:3003")
-    const chatRoomId = 2
+    const chatRoomId = 3
     const dispatch: AppDispatch = useDispatch()
     const user: any = useSelector((state: RootState) => state.currentUser.user)
-    // const lastMessage=useRef(null)
+    const lastMessage: any = useRef(null)
     const [currentMsg, setCurrentMsg] = useState("");
     const [chat, setChat] = useState<IMsgDataTypes[]>([]);
-    
+
     useEffect(() => {
         dispatch(getUser())
         getAllMessages()
     }, []);
     const getAllMessages = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/messages/getByRoom/2')
+            const res = await axios.get('http://localhost:5000/api/messages/getByRoom/3')
             setChat(res.data)
         } catch (error) {
             console.log(error);
@@ -43,6 +43,7 @@ const LiveChat = () => {
     const sendData = async (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
         if (currentMsg !== "") {
+            
             const msgData: IMsgDataTypes = {
                 chatRoomId,
                 sender: user.id,
@@ -65,20 +66,21 @@ const LiveChat = () => {
             console.log(error);
         }
     }
-
-
     useEffect(() => {
         socket.on("receive_msg", (data: IMsgDataTypes) => {
             setChat(previous => [...previous, data]);
         });
     }, [socket]);
+    useEffect(() => {
+        lastMessage.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [chat.length]);
     return (
         <div className='chat-box'>
             <span className='chat-header'>Top Chat</span>
             <div className='mesaage-container'>
                 {chat.map((msg, i) => {
                     return (
-                        <div key={i} className='one-message'>
+                        <div ref={lastMessage} key={i} className='one-message'>
                             <div className='image-frame'>
                                 <Image className='circle-image' src={img} alt="" />
                             </div>
@@ -86,16 +88,22 @@ const LiveChat = () => {
                         </div>
                     )
                 })}
-
             </div>
             <div className='input-section'>
                 <div className='image-frame2'>
                     <Image className='circle-image' src={img} alt="" />
                 </div>
-                <input className='message-input' type="text" placeholder='Write Your Message' value={currentMsg} onChange={(e) => setCurrentMsg(e.target.value)} />
-                <div className='send-button' onClick={(e: React.MouseEvent<HTMLElement>) => {
-                    sendData(e)
-                }} >
+                <input
+                    onKeyUp={(e:any) => {
+                        if (e.key === "Enter") {
+                            sendData(e)
+                        }
+                    }}
+                    className='message-input' type="text" placeholder='Write Your Message' value={currentMsg} onChange={(e) => setCurrentMsg(e.target.value)} />
+                <div className='send-button'
+                    onClick={(e: React.MouseEvent<HTMLElement>) => {
+                        sendData(e)
+                    }} >
                     <span>Send</span>
                 </div>
             </div>

@@ -21,6 +21,7 @@ io.on("connection", (socket) => {
   // });
 
   socket.on("send_msg", (data) => {
+    console.log(data);
     //This will send a message to a specific room ID
     socket.emit("receive_msg", data);
     // prisma.message.create({data })
