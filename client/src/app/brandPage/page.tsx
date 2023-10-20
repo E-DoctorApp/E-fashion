@@ -114,7 +114,6 @@ function page() {
                     </div>
                     <div className="group-6">
                         <OneProduct/>
-                  
                         {/* <div className="text-wrapper-22">Items</div>
                         <div className="group-7">
                             <div className="overlap-2">
