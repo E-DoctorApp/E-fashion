@@ -25,9 +25,6 @@ const LiveChat = () => {
     // const lastMessage=useRef(null)
     const [currentMsg, setCurrentMsg] = useState("");
     const [chat, setChat] = useState<IMsgDataTypes[]>([]);
-    console.log("chat ");
-    console.log(chat);
-    
     
     useEffect(() => {
         dispatch(getUser())
