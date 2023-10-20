@@ -8,6 +8,7 @@ import { AppDispatch, RootState } from '@/store'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from '@/store/signinReduser'
 import axios from 'axios'
+import { useAmp } from 'next/amp'
 
 interface IMsgDataTypes {
     chatRoomId: String | number;
@@ -78,11 +79,11 @@ const LiveChat = () => {
         <div className='chat-box'>
             <span className='chat-header'>Top Chat</span>
             <div className='mesaage-container'>
-                {chat.map((msg, i) => {
+                {chat.map((msg:any, i) => {
                     return (
                         <div ref={lastMessage} key={i} className='one-message'>
                             <div className='image-frame'>
-                                <Image className='circle-image' src={img} alt="" />
+                                <img className='circle-image' src={msg.User.profileImage} alt="" />
                             </div>
                             <span className='message-content'>{msg.content}</span>
                         </div>
@@ -91,7 +92,7 @@ const LiveChat = () => {
             </div>
             <div className='input-section'>
                 <div className='image-frame2'>
-                    <Image className='circle-image' src={img} alt="" />
+                    <img className='circle-image' src={user.profileImage} alt="" />
                 </div>
                 <input
                     onKeyUp={(e:any) => {
