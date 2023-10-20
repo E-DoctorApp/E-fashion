@@ -2,7 +2,7 @@ const prisma = require('../database/index');
 
 module.exports.getAllMessageByRoom = async (req, res) => {
     try {
-        const messages = await prisma.message.findMany({ where: { chatRoomId: +req.params.chatRoomId } })
+        const messages = await prisma.message.findMany({ where: { chatRoomId: +req.params.chatRoomId } , include : { User : true } });
         res.json(messages);
     } catch (error) {
         res.json({ error: error })
