@@ -86,60 +86,25 @@ interface User {
 
 
 const Home = () => {
-
-
-
-  const dispatch: AppDispatch = useDispatch()
-
-  // const products = useSelector((state: RootState) => state.products.products)
-  // console.log(products, 'those are products');
-
-  // useEffect(() => {
-  //     dispatch(fetchProducts())
-  // }, [])
-
-
-
-
-
-
-
-  const [brands, setBrands] = useState<User[]>([]);
-
-  // useEffect(() => {
-  //     axios.get<User[]>("http://localhost:5000/api/user/getUserByRole/brand").then((response) => {
-  //         const users = response.data.map((user) => ({
-  //             ...user,
-  //             following: false,
-  //         }));
-  //         setBrands(users);
-  //     });
-  // }, []);
-
-
-
-
   return (
     <div>
       <NavBar />
-
       <div>
         <div id='homePage'>
-
           <div className="topSectionBtns">
             <button className='mainColl'>Main Collection</button>
             <button className='creatorsMarket'>Creators Market</button>
           </div>
           <div className='bottomSection'>
-            <span className='secondSection'>
-              <span className='leftSection'>
+            <span className='secondSection' style={{display:"flex" ,justifyContent:"space-around"}}>
+              <span className='leftSection' style={{display:"flex",flexDirection:"column",justifyContent:"space-evenly"}}>
                 <h1>Clothes are the Spirit of Fation</h1>
                 <p className='lightParag' >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <div className='buttons' style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
-                  <Link href="/explore" >  <button style={{ padding: "0.5rem 5rem", background: "#6C5DD3", borderRadius: "1rem", border: "none", color: "white" }}>Explore Now</button></Link>
+                  <Link href="/explore" >  <button style={{ padding: "1rem 5rem", background: "#6C5DD3", borderRadius: "1rem", border: "none", color: "white" }}>Explore Now</button></Link>
                   <Link href='/createProduct'><button style={{ padding: "1rem 5rem", background: "#6C5DD3", borderRadius: "1rem", border: "none", color: "white" }}>Create</button></Link>
                 </div>
-                <div id="statistics">
+                <div id="statistics" style={{display:"flex",gap:"2rem",justifyContent:"center"}}>
                   <span>
                     <h4>
                       100+
