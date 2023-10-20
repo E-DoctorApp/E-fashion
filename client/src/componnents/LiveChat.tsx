@@ -14,6 +14,7 @@ interface IMsgDataTypes {
     chatRoomId: String | number;
     sender: number;
     content: String;
+    User:any
     // time: String;
 }
 
@@ -48,19 +49,23 @@ const LiveChat = () => {
             const msgData: IMsgDataTypes = {
                 chatRoomId,
                 sender: user.id,
-                content: currentMsg,
+                content: currentMsg, 
+                User : {
+                    profileImage : user.profileImage
+                }
                 //   time:
                 //     new Date(Date.now()).getHours() +
                 //     ":" +
                 //     new Date(Date.now()).getMinutes(),
             };
             await socket.emit("send_msg", msgData);
-            handlePostMessage(msgData)
+            const {sender,content} = msgData;
+            handlePostMessage({chatRoomId,sender,content});
             setCurrentMsg("");
         }
     };
 
-    const handlePostMessage = async (body: IMsgDataTypes) => {
+    const handlePostMessage = async (body: any) => {
         try {
             const res = await axios.post('http://localhost:5000/api/messages/add', body)
         } catch (error) {
@@ -83,7 +88,7 @@ const LiveChat = () => {
                     return (
                         <div ref={lastMessage} key={i} className='one-message'>
                             <div className='image-frame'>
-                                <img className='circle-image' src={msg.User.profileImage} alt="" />
+                                <img className='circle-image' src={msg.User?.profileImage} alt="" />
                             </div>
                             <span className='message-content'>{msg.content}</span>
                         </div>
