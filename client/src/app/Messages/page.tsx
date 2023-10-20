@@ -92,9 +92,9 @@ interface FormData {
     handleSendDB();
   };
 
-  useEffect(() => {
-    fetchMessages();
-  }, []);
+  // useEffect(() => {
+  //   fetchMessages();
+  // }, []);
 
 //   useEffect(() => {
   const listener = (user: any, message: any) => {
