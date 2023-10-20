@@ -305,12 +305,12 @@ async function main() {
     // await prisma.product.createMany({
     //     data: productData
     // });
-    await prisma.chatRoom.createMany({
-        data : chatRoomData
-    })
-    await prisma.message.createMany({
-        data : messageData
-    })
+    // await prisma.chatRoom.createMany({
+    //     data : chatRoomData
+    // })
+    // await prisma.message.createMany({
+    //     data : messageData
+    // })
 
     // ... you will write your Prisma Client queries here
 }
