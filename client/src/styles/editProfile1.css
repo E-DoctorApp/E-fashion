@@ -524,7 +524,7 @@ grid-gap: 10px;
   border-radius: 150px;
   height: 39px;
   position: relative;
-  width: 666px;
+  /* width: 666px; */
 }
 
 .edit-profile-page .text-wrapper-20 {
