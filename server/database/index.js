@@ -297,6 +297,92 @@ const chatRoomData = [
         name: 'Room 12',
     },
 ];
+const postData = [
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3erTK11PJLIDxYltJBnvMWGYhs98QkYdlF0W7tMn-hsUdn-ncqc_FyCo7fh-jBroybAs&usqp=CAU',
+        content: 'This is the first post.',
+        numLikes: 20,
+        numShares: 5,
+        userId: 1, // Replace with the actual user ID
+    },
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3PCTptYq2l2aQmumiJiCDQGXULqi1NQu_mmeHld1TZ6lspN8gNmeQ96vOKSeiAQSyOsk&usqp=CAU',
+        content: 'A beautiful sunset!',
+        numLikes: 50,
+        numShares: 10,
+        userId: 2, // Replace with the actual user ID
+    },
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJWIm41hcMX3pBhr7tsQCW9foQi_iS_RtP7HL5YS1VPbyrVsP0fdtWs6AScprAMDRDTGw&usqp=CAU',
+        content: 'Exploring new places!',
+        numLikes: 30,
+        numShares: 8,
+        userId: 3, // Replace with the actual user ID
+    },
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD25c5fSfL1zuSujAZEljypgiILp8bVx2jtWbCVTs_eIA07M1UfKdKeJWoW_bMXZdm9C0&usqp=CAU',
+        content: 'Foodie adventure!',
+        numLikes: 40,
+        numShares: 12,
+        userId: 4, // Replace with the actual user ID
+    },
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSM_GdNv-OtIOqMBfAPSrvk2VkTMOw-kVB52S4Pnp_y1uKI5FjkpJVn40JFmLXxhf3cvU&usqp=CAU',
+        content: 'Coding all day!',
+        numLikes: 60,
+        numShares: 15,
+        userId: 5, // Replace with the actual user ID
+    },
+    {
+        image: 'https://www.diariesofmagazine.com/wp-content/uploads/2018/02/WEB_VAL_8895-e1518892150624.jpg',
+        content: 'Hiking in the mountains.',
+        numLikes: 25,
+        numShares: 7,
+        userId: 6, // Replace with the actual user ID
+    },
+    {
+        image: 'https://images.moneycontrol.com/static-mcnews/2020/07/online-gaming-1-770x433.jpg?impolicy=website&width=770&height=431',
+        content: 'Gaming time!',
+        numLikes: 70,
+        numShares: 18,
+        userId: 7, // Replace with the actual user ID
+    },
+    {
+        image: 'https://blog.currentcatalog.com/wp-content/uploads/2018/09/Reading.jpg',
+        content: 'Reading a good book.',
+        numLikes: 35,
+        numShares: 9,
+        userId: 3, // Replace with the actual user ID
+    },
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-4tH3pAfPgzHYKU-IQ_hUp5UyiSne7BzQaZSRBRh6sIIO6HOLoN8Ehw6USBauyYCCok&usqp=CAU',
+        content: 'Weekend relaxation.',
+        numLikes: 45,
+        numShares: 11,
+        userId: 1, // Replace with the actual user ID
+    },
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0VbSkvj5yjeUXwunxHpPotIj3SRI1vL9fbsCndCz0ueLJkzTvi-DjK-oIRLzb0P9rqXo&usqp=CAU',
+        content: 'Artistic expression.',
+        numLikes: 55,
+        numShares: 13,
+        userId: 2, // Replace with the actual user ID
+    },
+    {
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNEhjJyN1eHdHKBOQlq8-M7JPizJ2uGFYKU1ttNm0j5iAPME9j-ksYajv1-zF2ox8eauQ&usqp=CAU',
+        content: 'Traveling the world.',
+        numLikes: 33,
+        numShares: 7,
+        userId: 1, // Replace with the actual user ID
+    },
+    {
+        image: 'https://www.trainheroic.com/wp-content/uploads/2022/12/AdobeStock_308728099-TH-jpg.webp',
+        content: 'Fitness goals!',
+        numLikes: 75,
+        numShares: 20,
+        userId: 7, // Replace with the actual user ID
+    },
+];
 
 async function main() {
     // await prisma.category.createMany({
@@ -311,6 +397,9 @@ async function main() {
     // await prisma.message.createMany({
     //     data : messageData
     // })
+    await prisma.post.createMany({
+        data: postData
+    });
 
     // ... you will write your Prisma Client queries here
 }
@@ -408,92 +497,7 @@ const dummyUsers = [
 
 
 
-const postData = [
-    {
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3erTK11PJLIDxYltJBnvMWGYhs98QkYdlF0W7tMn-hsUdn-ncqc_FyCo7fh-jBroybAs&usqp=CAU',
-        content: 'This is the first post.',
-        numLikes: 20,
-        numShares: 5,
-        userId: 1, // Replace with the actual user ID
-    },
-    {
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3PCTptYq2l2aQmumiJiCDQGXULqi1NQu_mmeHld1TZ6lspN8gNmeQ96vOKSeiAQSyOsk&usqp=CAU',
-        content: 'A beautiful sunset!',
-        numLikes: 50,
-        numShares: 10,
-        userId: 2, // Replace with the actual user ID
-    },
-    {
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJWIm41hcMX3pBhr7tsQCW9foQi_iS_RtP7HL5YS1VPbyrVsP0fdtWs6AScprAMDRDTGw&usqp=CAU',
-        content: 'Exploring new places!',
-        numLikes: 30,
-        numShares: 8,
-        userId: 3, // Replace with the actual user ID
-    },
-    {
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD25c5fSfL1zuSujAZEljypgiILp8bVx2jtWbCVTs_eIA07M1UfKdKeJWoW_bMXZdm9C0&usqp=CAU',
-        content: 'Foodie adventure!',
-        numLikes: 40,
-        numShares: 12,
-        userId: 4, // Replace with the actual user ID
-    },
-    {
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSM_GdNv-OtIOqMBfAPSrvk2VkTMOw-kVB52S4Pnp_y1uKI5FjkpJVn40JFmLXxhf3cvU&usqp=CAU',
-        content: 'Coding all day!',
-        numLikes: 60,
-        numShares: 15,
-        userId: 5, // Replace with the actual user ID
-    },
-    {
-        image: 'https://www.diariesofmagazine.com/wp-content/uploads/2018/02/WEB_VAL_8895-e1518892150624.jpg',
-        content: 'Hiking in the mountains.',
-        numLikes: 25,
-        numShares: 7,
-        userId: 6, // Replace with the actual user ID
-    },
-    {
-        image: 'https://images.moneycontrol.com/static-mcnews/2020/07/online-gaming-1-770x433.jpg?impolicy=website&width=770&height=431',
-        content: 'Gaming time!',
-        numLikes: 70,
-        numShares: 18,
-        userId: 7, // Replace with the actual user ID
-    },
-    {
-        image: 'https://blog.currentcatalog.com/wp-content/uploads/2018/09/Reading.jpg',
-        content: 'Reading a good book.',
-        numLikes: 35,
-        numShares: 9,
-        userId: 8, // Replace with the actual user ID
-    },
-    {
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-4tH3pAfPgzHYKU-IQ_hUp5UyiSne7BzQaZSRBRh6sIIO6HOLoN8Ehw6USBauyYCCok&usqp=CAU',
-        content: 'Weekend relaxation.',
-        numLikes: 45,
-        numShares: 11,
-        userId: 9, // Replace with the actual user ID
-    },
-    {
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0VbSkvj5yjeUXwunxHpPotIj3SRI1vL9fbsCndCz0ueLJkzTvi-DjK-oIRLzb0P9rqXo&usqp=CAU',
-        content: 'Artistic expression.',
-        numLikes: 55,
-        numShares: 13,
-        userId: 10, // Replace with the actual user ID
-    },
-    {
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNEhjJyN1eHdHKBOQlq8-M7JPizJ2uGFYKU1ttNm0j5iAPME9j-ksYajv1-zF2ox8eauQ&usqp=CAU',
-        content: 'Traveling the world.',
-        numLikes: 33,
-        numShares: 7,
-        userId: 11, // Replace with the actual user ID
-    },
-    {
-        image: 'https://www.trainheroic.com/wp-content/uploads/2022/12/AdobeStock_308728099-TH-jpg.webp',
-        content: 'Fitness goals!',
-        numLikes: 75,
-        numShares: 20,
-        userId: 12, // Replace with the actual user ID
-    },
-];
+
 const commentData = [
     {
         content: 'Great post!',

@@ -2,17 +2,21 @@
 import Image from 'next/image'
 import React from 'react'
 import asset from '../../public/Assests/images/Brandpage/unsplash_DbOdCSoefsg.png'
+interface props{
+    product:any
+}
 
-const OneProduct = () => {
+
+const OneProduct = ({product}:props ) => {
   return (
     <div className="overlap-2">
     <div className="div-2">
         <div className="overlap-group-5">
             <div className="text-wrapper-23">@Johny</div>
-            <div className="text-wrapper-24">Lorem Ipsum</div>
-            <div className="text-wrapper-25">0.005 ETH</div>
-            <div className="text-wrapper-26">Current Bid</div>
-            <Image className="collection" alt="Collection" src={asset} />
+            <div className="text-wrapper-24">{product.name}</div>
+            <div className="text-wrapper-25">{product.price}</div>
+            <div className="text-wrapper-26">{product.status}</div>
+            <img className="collection" alt="Collection" src={product.image} />
         </div>
     </div>
     <div className="group-8">
