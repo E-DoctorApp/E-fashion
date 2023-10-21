@@ -52,7 +52,7 @@ const SignIn: FunctionComponent = () => {
     // }
 
     dispatch(signinUser({ ...formData}));
-    router.push("/home")
+    router.push("/")
   }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {

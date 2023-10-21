@@ -36,9 +36,9 @@ return (
   <div>
   
 
-                        <div>
+                        
                         <video ref={videoRef} autoPlay  playsInline></video>
-  </div>
+  
       </div>                  
 );
 }
