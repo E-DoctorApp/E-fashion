@@ -64,8 +64,8 @@ const NavBar = () => {
                                     <Link style={{ textDecoration: 'none', color: 'white' }} href='/About'>
                                         <li>About Us</li>
                                     </Link>
-                                    <Link style={{ textDecoration: 'none', color: 'white' }} href='/studio'>
-                                        <li>Creator Studio</li>
+                                    <Link style={{ textDecoration: 'none', color: 'white' }} href='/brandPage'>
+                                        <li>BrandPage</li>
                                     </Link>
                                     <Link style={{ textDecoration: 'none', color: 'white' }} href='/edit'>
                                         <li>Edit Profile</li>
