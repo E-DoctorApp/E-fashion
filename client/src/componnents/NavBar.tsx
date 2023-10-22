@@ -22,6 +22,7 @@ const NavBar = () => {
                     <div className="div">
                         <Link href="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
                     </div>
+
                     <Link href='/AllNFT'>
                         <div className="text-wrapper-2">NFTs</div>
                     </Link>
@@ -41,10 +42,10 @@ const NavBar = () => {
 
                     </div>
                     <Link href='/Messages'>
-                    <Image className="group-2" alt="Group" src={group} />
+                        <Image className="group-2" alt="Group" src={group} />
                     </Link>
                     <Link href='/drops'>
-                    <div className="text-wrapper-4">Drops</div>
+                        <div className="text-wrapper-4">Drops</div>
                     </Link>
                     <div className="group-3">
 
@@ -67,9 +68,14 @@ const NavBar = () => {
                             </details>
                         </div>
                     </div>
-                    <div className="frame">
-                        <div className="text-wrapper-5">Wallet</div>
-                    </div>
+                    {
+                        localStorage.getItem('token') ? <div className="text-wrapper-5">Logout</div> :
+                            <div className="frame" style={{ display: "flex", gap: "1rem" }}>
+                                <div className="text-wrapper-5">SignUp</div>
+                                <div className="text-wrapper-5">SignIn</div>
+                            </div>
+                    }
+
                 </div>
             </div>
         </div>
