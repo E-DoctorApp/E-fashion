@@ -5,6 +5,8 @@ import img1 from "../../../public/Assests/images/albert-dera-ILip77SbmOE-unsplas
 import Image from "next/image";
 import NavBar from "@/componnents/NavBar";
 import Footer from "@/componnents/Footer";
+import BrandCard from "@/componnents/UpcomingBrands";
+import FashionistaCard from "@/componnents/UpcomigCreators";
 
 // import BrandCard from "../BrandCard";
 // import FashionistaCard from "../UpcomigCreators";
@@ -56,10 +58,10 @@ const ExplorePage: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.exploreComponents}>
-        {/* {selectedCard === "brand" && <BrandCard />}
-        {selectedCard === "creator" && <FashionistaCard />}
-        {selectedCard === "fashion" && <FullProductCard />} */}
-      </div>
+          {selectedCard === "brand" && <BrandCard />}
+          {selectedCard === "creator" && <FashionistaCard />}
+          {selectedCard !== "brand" && selectedCard !== "creator" && <h1 style={{textAlign:"center"}}>No Products For Now </h1>}
+        </div>
       </div>
       <Footer />
     </div>

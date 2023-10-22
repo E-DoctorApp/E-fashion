@@ -1,9 +1,14 @@
+"use client"
 import React, { useState } from 'react'
 import '../styles/navBar.css'
 
 import group from '../../public/Assests/images/Group 48095728.svg'
 import Link from 'next/link'
 import Image from 'next/image'
+import { AppDispatch } from '@/store'
+import { useDispatch } from 'react-redux'
+import { logout } from '@/store/signinReduser'
+import { useRouter } from 'next/navigation'
 interface User {
     id: number,
     email: string;
@@ -13,6 +18,8 @@ interface User {
     dateOfBirth: string,
 }
 const NavBar = () => {
+    const dispatch:AppDispatch=useDispatch()
+    const router =useRouter()
 
     return (
         <div className='fofo' >
@@ -22,7 +29,6 @@ const NavBar = () => {
                     <div className="div">
                         <Link href="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
                     </div>
-
                     <Link href='/AllNFT'>
                         <div className="text-wrapper-2">NFTs</div>
                     </Link>
@@ -41,7 +47,7 @@ const NavBar = () => {
                         </Link>
 
                     </div>
-                    <Link href='/Messages'>
+                    <Link href='/selfash'>
                         <Image className="group-2" alt="Group" src={group} />
                     </Link>
                     <Link href='/drops'>
@@ -69,10 +75,17 @@ const NavBar = () => {
                         </div>
                     </div>
                     {
-                        localStorage.getItem('token') ? <div className="text-wrapper-5">Logout</div> :
+                        localStorage.getItem('token') ? <div 
+                        onClick={()=>{dispatch(logout());router.push('/signIn');}}
+                        className="text-wrapper-5">Logout</div> :
                             <div className="frame" style={{ display: "flex", gap: "1rem" }}>
-                                <div className="text-wrapper-5">SignUp</div>
-                                <div className="text-wrapper-5">SignIn</div>
+                                <div className="text-wrapper-5"
+                                onClick={()=>router.push("/signUp")}
+                                >SignUp</div>
+                                <div 
+                                onClick={()=>router.push("/signIn")}
+                                
+                                className="text-wrapper-5">SignIn</div>
                             </div>
                     }
 

@@ -18,11 +18,7 @@ const initialState: SignUpState = {
 // Async Thunk for Signup
 export const signupUser = createAsyncThunk("signup/signupUser", async (formData: object) => {
     try {
-      console.log(formData);
-      
       const response = await axios.post("http://localhost:5000/api/users/register", formData);
-      console.log(response.data);
-      
       return response.data; // Assuming your API returns user data upon successful signup
     } catch (error) {
       return "Signup failed";

@@ -1,5 +1,6 @@
 "use client"
 import LiveChat from '@/componnents/LiveChat';
+import NavBar from '@/componnents/NavBar';
 // Streamer.tsx
 import React, { useEffect, useRef } from 'react';
 // import Peer from 'peerjs';
@@ -31,10 +32,16 @@ function Streamer() {
   }, []);
 
   return (
-    <div>
-      <h2>Streaming</h2>
-      <video ref={videoRef} autoPlay muted playsInline ></video>
-      <LiveChat/>
+    <div style={{ width: "100vw" }}>
+      <NavBar />
+      <div style={{ display: "flex", gap: "2rem", flexDirection: "row", width: "100vw", padding: "1rem 5rem", alignItems: "center" }}>
+        <div>
+          <video ref={videoRef} autoPlay muted playsInline ></video>
+        </div>
+        <div>
+          <LiveChat />
+        </div>
+      </div>
     </div>
   );
 }
