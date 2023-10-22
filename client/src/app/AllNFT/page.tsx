@@ -1,12 +1,15 @@
+"use client"
 import { FunctionComponent, useState, useEffect } from "react";
 // import { data } from '../torbagaDummyData' //this line will be deleted when we import the real data from redux's store
 import "../../styles/AllNFT.css";
+import axios from "axios"
 // import ProductCard from "../components/NewTrending";
 import NavBar from "@/componnents/NavBar";
 import Footer from "@/componnents/Footer";
 
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "../../store";
+import OneProduct from "@/componnents/OneProduct";
 // import { fetchProducts } from '../components/NftDAta/NftData'
 
 enum Category {
@@ -29,28 +32,29 @@ interface ProductCardProps {
   prod: Product;
 }
 const AllNFT = () => {
-  // const dispatch:AppDispatch = useDispatch()
+  const [products, setProducts] = useState<object[]>([])
+  const fetchAllProducts = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/api/products/getAll")
+      setProducts(res.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    fetchAllProducts()
+  }, [])
 
-  // const products = useSelector((state : RootState)=>state.products.products)
-  // console.log(products , 'those are products');
 
-  // useEffect(()=>{
-  //     dispatch(fetchProducts())
 
-  // },[])
 
-  // const [products, setProducts] = useState<object[]>([])
-
-  // useEffect(() => {
-  //     setProducts(data)
-  // }, [])
 
   return (
     <div>
       <div className="nav">
         <NavBar />
       </div>
-      <div id="allNftPage">
+      <div id="allNftPage" className="brand-page">
         <div className="sideBar">
           <div className="topSection">
             <svg
@@ -185,20 +189,19 @@ const AllNFT = () => {
               <button className="allBtn">All Items</button>
               <select className="select-dropdown">
                 <option disabled>Select Category</option>
-                {}
+                { }
               </select>
             </div>
           </div>
-          <div className="cards">
+          <div  style={{display:"flex",width:"80vw",flexWrap:"wrap"}}>
             {
-              //  products.map((product:Product) => <ProductCard key={product.id} prod={product}/>)
-              // products.map((product) => <ProductCard/>)
+              products.map((product: any) => <OneProduct key={product.id} product={product} />)
             }
           </div>
           <div></div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

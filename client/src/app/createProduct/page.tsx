@@ -10,6 +10,7 @@ import axios from 'axios';
 import { AppDispatch, RootState } from '@/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '@/store/signinReduser';
+import { useRouter } from 'next/navigation';
 // import { AppDispatch } from '../store';
 
 
@@ -35,7 +36,7 @@ const CreateProduct = () => {
   const [quantity, setQuantity] = useState('');
   const [category, setCategory] = useState('');
   const [typeProd, setTypeProd] = useState('');
-
+  const router=useRouter()
 useEffect(() => {
   dispatch(getUser())
 },[])
@@ -107,6 +108,7 @@ console.log(user);
                 userId: user.id,
                 status: "OnStock"
               })
+              router.push("/")
              }} 
              >Create Product</button>
     </div>

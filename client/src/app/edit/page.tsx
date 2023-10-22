@@ -61,14 +61,13 @@ const EditProfile: FunctionComponent = () => {
     const [allimage, setAllImage] = useState<string[]>([])
     const [image, setImage] = useState<string>('')
     const [userImage, setImageUser] = useState<string>('');
+    console.log(user);
+    
     useEffect(() => {
         dispatch(getUser())
         dispatch(fetchposts(user.id))
     }, [user.id, update])
 
-    // useEffect(() => {
-    //     dispatch(getUser())
-    // }, [update])
 
 
 
@@ -112,14 +111,10 @@ const EditProfile: FunctionComponent = () => {
         formData.append("upload_preset", "oztadvnr")
         await axios.post("https://api.cloudinary.com/v1_1/dl4qexes8/upload", formData).then((response) => {
             updateProfilePhoto({ profileImage: response.data["secure_url"] })
-            // setImageUser(response.data["secure_url"])
-            // setUser({ id: user.id, name: user.name, email: user.email, image: response.data["secure_url"], password: user.password, dateOfBirth: user.dateOfBirth })
-            // UpdateUser(user.id, response.data["secure_url"])
         }).catch((error) => {
             console.log(error);
         })
     }
-    //   localStorage.setItem('user', JSON.stringify(user));
     return (
         <div>
             <NavBar />

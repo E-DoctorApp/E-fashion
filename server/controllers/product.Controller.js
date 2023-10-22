@@ -74,7 +74,7 @@ module.exports.getAllProductByPrice = async (req, res) => {
 }
 module.exports.getAllProductByCategories = async (req, res) => {
     try {
-        const products = await prisma.product.findMany({ where: { categoryId: +req.params.categories } })
+        const products = await prisma.product.findMany({ where: { categoryId: +req.params.categories },include:{User:true} })
         res.json(products)
     } catch (error) {
         console.log(error);

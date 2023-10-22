@@ -19,13 +19,11 @@ const initialState: SignInState = {
 export const getUser = createAsyncThunk("signin/getUser", async () => {
   try {
     const token = localStorage.getItem("token")
-    
     const response = await axios.get("http://localhost:5000/api/users/getOne", {
       headers: {
         Authorization: `Bearer ${token}`
       }
     });
-
     return response.data;
     // Assuming your API returns user data upon successful signup
   } catch (error) {
