@@ -114,7 +114,6 @@ function page() {
                         </div>
                         <div className="group-6" style={{display:"flex"}}>
                             {products?.map((product,i) => <OneProduct key={i} product={product} />)}
-
                         </div>
                         <div className="group-wrapper">
                             <div className="group-9">
