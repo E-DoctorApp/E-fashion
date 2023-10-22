@@ -21,12 +21,9 @@ interface FormData {
 
 const SignIn: FunctionComponent = () => {
   const router=useRouter()
-  //   let navigate = useNavigate()
-
   const onNewUserCreateClick = () => {
     router.push("/signUp")
   }
-
   const [formData, setFormData] = useState<FormData>({
     email: '',
     password: ''
@@ -34,27 +31,12 @@ const SignIn: FunctionComponent = () => {
   const user = useSelector((state: RootState) => state)
   const dispatch = useDispatch<AppDispatch>()
   const [error, setError] = useState<string>('');
-
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
     const { email, password } = formData
-    // if (!email) {
-    //   setError('Please Fill all fields');
-    //   return (
-    //     alert("Please check your email address  ")
-    //   )
-    // }
-    // if (!password) {
-    //   setError('Please Fill all fields');
-    //   return (
-    //     alert("Please check your password")
-    //   )
-    // }
-
     dispatch(signinUser({ ...formData}));
     router.push("/")
   }
-
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -62,8 +44,6 @@ const SignIn: FunctionComponent = () => {
       [name]: value,
     }))
   };
-
-
   return (
 
     <div className={styles.sign_In}>
