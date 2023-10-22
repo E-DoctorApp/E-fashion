@@ -63,13 +63,22 @@ module.exports.getAllProductByStatus = async (req, res) => {
         res.json(error)
     }
 }
-module.exports.getAllProductByPrice = async (req, res) => {
+module.exports.getAllProductsByPrice = async (req, res) => {
     try {
-        const products = await prisma.product.findMany({ where: { price: +req.params.price } })
-        res.json(products)
+       
+
+        const products = await prisma.product.findMany({
+            where: {
+                price: {
+                    gt: +req.params.price
+                }
+            }
+        });
+
+        res.json(products);
     } catch (error) {
-        console.log(error);
-        res.json(error)
+        console.error(error);
+        res.json(error);
     }
 }
 module.exports.getAllProductByCategories = async (req, res) => {

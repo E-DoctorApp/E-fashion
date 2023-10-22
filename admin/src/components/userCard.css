@@ -1,0 +1,118 @@
+/* .grand-father-card{
+    display:flex;
+     justify-content: flex-end;
+     width:100%;
+     height: 100%;
+     gap: 2rem;
+     align-items: center;
+    
+}
+.father-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: aquamarine;
+    width: 80%;
+    height:100%;
+
+
+}
+.table-users{
+    width: 60%;
+    height: 70%;
+    background-color: antiquewhite;
+
+}
+
+.card-photo{
+    border-radius: 25%;
+    
+}
+.aside-bar{
+width: 20%;
+height: 100%;
+background-color: blue;
+}
+
+
+ */
+
+.main-dash {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    gap: 3rem;
+    align-items: center;
+}
+
+.aside-dash {
+    width: 20%;
+    height: 100%;
+    background-color: bisque;
+}
+
+.content-dash {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 85%;
+    background-color: aquamarine;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.table-dash {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 90%;
+    background-color: chocolate;
+}
+.table-choix{
+    width:100%;
+    height: 10%;
+    background-color: cadetblue;
+}
+.card-dash {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 3rem;
+    width: 32%;
+    height: 70%;
+    background-color: darkmagenta;
+}
+
+.profile-photo {
+    position: absolute;
+    top: -5rem;
+    left: 6.2rem ;
+    border-radius: 10rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: chartreuse;
+}
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-titels-content p{
+    display: flex;
+    /* flex-direction: column; */
+    font-size: large;
+    font-weight: 700 ;    
+    width: 100%;
+    align-items: left;
+}
+.taswira{
+    width: 10rem;
+    height:10rem;
+    border-radius: 10rem;
+}

@@ -38,13 +38,16 @@ interface propsState {
 }
 
 
-const BrandStorePage = (props: any) => {
+const BrandStorePage = async (props: any) => {
     // const location = useLocation();
     // const data  = location.state;
     const [count, setCount] = useState(1);
     useEffect(() => {
 
     }, [count])
+        const res = await fetch("http://127.0.0.1:5000/api/products/getAll")
+        const products= await res.json()
+    
 
     return (
         <div>
@@ -72,7 +75,8 @@ const BrandStorePage = (props: any) => {
                                 </div>
                                 <div className="overlap-3">
                                     <div className="group-5">
-                                        <div className="group-wrapper">
+                                        <div className="group-wrapper" onClick={(e:any)=> console.log(products)
+                                        }>
                                             <div className="group-6">
                                                 <Image width={500} height={500} className="vector-2" alt="Vector" src={asset1} />
                                                 <div className="text-wrapper-19" onClick={() => {

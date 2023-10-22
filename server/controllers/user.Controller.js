@@ -95,16 +95,16 @@ module.exports.getUserByType = async (req, res) => {
 
 }
 
-// module.exports.updateLists = async (req, res) => {
-//     try {
-//         const update = await User.update(req.body, {
-//             where: { id: req.params.id },
-//         });
-//         res.json(update);
-//     } catch (error) {
-//         res.status(404).json(error);
-//     }
-// };
+module.exports.updateLists = async (req, res) => {
+    try {
+        const update = await User.update(req.body, {
+            where: { id: req.params.id },
+        });
+        res.json(update);
+    } catch (error) {
+        res.status(404).json(error);
+    }
+};
 
 // module.exports.updateUserInfo = async (req, res) => {
 //     try {
@@ -151,3 +151,36 @@ module.exports.getUserByType = async (req, res) => {
 //         res.status(404).json(error);
 //     }
 // };
+
+module.exports.getAllUser = async (req, res)=> {
+    try {
+        const users = await prisma.user.findMany({})
+        res.json(users);
+    } catch (error) {
+        console.log(error);
+    }
+}
+module.exports.deleteUser = async (req,res)=>{
+    try {
+        const pobela = await prisma.user.delete({where:{id: +req.params.id}})
+        res.json(pobela);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+module.exports.updateUser = async (req, res)=>{
+    try {
+        const update = await prisma.user.update({
+            where: {
+                 id: req.params.id,
+             },
+            data: {
+                type: req.body
+            }            
+        });
+        res.json(update);
+    } catch (error) {
+        res.status(404).json(error);
+    }
+}
