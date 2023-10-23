@@ -1,5 +1,5 @@
 "use client"
-import React, { FunctionComponent, useState, useEffect } from 'react'
+import React from 'react'
 import '../styles/Home.css'
 import adidas from '../../public/Assests/images/adidas.png'
 import puma from '../../public/Assests/images/puma.png'
@@ -10,38 +10,12 @@ import carbonNeturalNFTs from '../../public/Assests/images/carbonNeturalNFTs.png
 import fastNEasyTrans from '../../public/Assests/images/fastNEasyTrans.png'
 import allImgs from '../../public/Assests/images/allImgs.png'
 import Image from 'next/image'
-
-// import ClientCard from '../components/BrandCard'
-
-// import { Link } from 'react-router-dom'
-
-// import { data } from '../torbagaDummyData' //this line will be deleted when we import the real data from redux's store
-// import ProductCard from '../components/NewTrending'
 import Footer from '@/componnents/Footer'
-import { useSelector, useDispatch } from 'react-redux'
-import { AppDispatch } from '@/store'
-import { getUser } from '@/store/signinReduser'
 import Link from 'next/link'
 import NavBar from '@/componnents/NavBar'
 import FashionistaCard from '@/componnents/UpcomigCreators'
-
-// import { RootState, AppDispatch } from '../store'
-// import { fetchProducts } from '../components/ProductData/productData'
-
-// import { fetchUsers } from '../components/UsersData/UsersData'
-
-
 import UpcomingBrands from "@/componnents/UpcomingBrands"
-// import axios from 'axios'
-// import FashionCard from '../components/FashionistaCard'
-// import FashionistaCard from '../components/UpcomigCreators'
-// import ProductCardContainer from '../components/NewTrending'
 import ProductCardContainer from '@/componnents/NewTrending'
-
-interface UpcomingBrandsProps {
-  users: User[];
-}
-
 
 enum Category {
   Men = "men",
@@ -49,42 +23,6 @@ enum Category {
   Kids = "kids",
   Other = "other"
 }
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  category: Category,
-  UserId: number,
-}
-interface User {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-  followers: number;
-  following: boolean;
-}
-////////////////////////////////////////////////////////////////
-enum Role {
-  follower = "follower",
-  brand = "brand",
-  fashionista = "fashionista"
-}
-interface User {
-  id: number;
-  name: string;
-  image: string;
-  email: number;
-  password: string
-  Role: Role
-  role: string
-
-}
-
-
-
 const Home = () => {
   return (
     <div>

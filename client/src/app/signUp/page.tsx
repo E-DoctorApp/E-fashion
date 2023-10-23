@@ -40,12 +40,6 @@ const SignUp: FunctionComponent = () => {
     dateOfBirth: "",
     type: "regular",
   });
-  // console.log("from Data ");
-  // console.log(formData);
-  // // console.log(year);
-  // console.log(month);
-  // // console.log(day);
-  // console.log(type);
 
 
 
@@ -96,12 +90,12 @@ const SignUp: FunctionComponent = () => {
     //     alert(" Please use a stronger password")
     //   )
     // }
-    if (!day || !month || !year) {
-      setError('Invalid date of birth.');
-      return (
-        alert(" Invalid date of birth.")
-      )
-    }
+    // if (!day || !month || !year) {
+    //   setError('Invalid date of birth.');
+    //   return (
+    //     alert(" Invalid date of birth.")
+    //   )
+    // }
     const paddedDay = day.padStart(2, '0');
     const paddedMonth = month.padStart(2, '0');
     const paddedYear = year.padStart(4, '0');
@@ -125,7 +119,7 @@ const SignUp: FunctionComponent = () => {
             <span className="--span">{` `}</span>
           </span>
           <span className="--span">
-            <span className="sign--In1" >Sign In</span>
+            <span className="sign--In1" onClick={ ()=>router.push("/signIn")} >Sign In</span>
           </span>
         </div>
         <div className="email--Address--Parent">

@@ -8,7 +8,6 @@ import { AppDispatch, RootState } from '@/store'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser } from '@/store/signinReduser'
 import axios from 'axios'
-import { useAmp } from 'next/amp'
 
 interface IMsgDataTypes {
     chatRoomId: String | number;
@@ -49,7 +48,7 @@ const LiveChat = () => {
     const sendData = async (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
         if (currentMsg !== "") {
-            
+
             const msgData: IMsgDataTypes = {
                 chatRoomId,
                 sender: user.id,
@@ -62,9 +61,12 @@ const LiveChat = () => {
                 //     ":" +
                 //     new Date(Date.now()).getMinutes(),
             };
-            await socket.emit("send_msg", msgData);
-            const {sender,content} = msgData;
-            handlePostMessage({chatRoomId,sender,content});
+            await socket.emit("send_msg", {
+                ...msgData, User: {
+                    profileImage: user.profileImage
+                }
+            });
+            handlePostMessage(msgData)
             setCurrentMsg("");
         }
     };
@@ -85,10 +87,10 @@ const LiveChat = () => {
         lastMessage.current?.scrollIntoView({ behavior: 'smooth' });
     }, [chat.length]);
     return (
-        <div className='chat-box'>
+        <div className='chat-box' style={{width:"200%",height:"30rem"}}>
             <span className='chat-header'>Top Chat</span>
             <div className='mesaage-container'>
-                {chat.map((msg:any, i) => {
+                {chat.map((msg: any, i) => {
                     return (
                         <div ref={lastMessage} key={i} className='one-message'>
                             <div className='image-frame'>
@@ -104,7 +106,7 @@ const LiveChat = () => {
                     <img className='circle-image' src={user?.profileImage} alt="" />
                 </div>
                 <input
-                    onKeyUp={(e:any) => {
+                    onKeyUp={(e: any) => {
                         if (e.key === "Enter") {
                             sendData(e)
                         }

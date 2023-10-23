@@ -19,13 +19,11 @@ const initialState: SignInState = {
 export const getUser = createAsyncThunk("signin/getUser", async () => {
   try {
     const token = localStorage.getItem("token")
-    
     const response = await axios.get("http://localhost:5000/api/users/getOne", {
       headers: {
         Authorization: `Bearer ${token}`
       }
     });
-
     return response.data;
     // Assuming your API returns user data upon successful signup
   } catch (error) {
@@ -53,7 +51,14 @@ export const getUserSlice = createSlice({
     user: {},
     isAuthenticated: false
   },
-  reducers: {},
+  reducers: {
+    logout: (state) => {
+      state.loading = false;
+      state.error = null;
+      state.user = {}
+      localStorage.removeItem("token");
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(getUser.pending, (state) => {
       state.loading = true;
@@ -91,3 +96,4 @@ const signInSlice = createSlice({
   },
 });
 export default { signIn: signInSlice.reducer, currentUser: getUserSlice.reducer }
+export const  { logout }=getUserSlice.actions

@@ -1,9 +1,14 @@
+"use client"
 import React, { useState } from 'react'
 import '../styles/navBar.css'
 
 import group from '../../public/Assests/images/Group 48095728.svg'
 import Link from 'next/link'
 import Image from 'next/image'
+import { AppDispatch } from '@/store'
+import { useDispatch } from 'react-redux'
+import { logout } from '@/store/signinReduser'
+import { useRouter } from 'next/navigation'
 interface User {
     id: number,
     email: string;
@@ -13,21 +18,20 @@ interface User {
     dateOfBirth: string,
 }
 const NavBar = () => {
-    // const userJSON: string | null = localStorage.getItem("user");
-    // const userParse: User = userJSON ? JSON.parse(userJSON) : null;
-    // const [user, setUser] = useState<User>(userParse);
+    const dispatch:AppDispatch=useDispatch()
+    const router =useRouter()
+
     return (
         <div className='fofo' >
             <div >
                 <div style={{ display: "flex", height: "8rem", width: "100%", justifyContent: "space-around", alignItems: "center" }}>
                     <div className="text-wrapper" >Logo</div>
                     <div className="div">
-                        {/* <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link> */}
-                        Home
+                        <Link href="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
                     </div>
-                    {/* <Link to='/NFT'> */}
-                    <div className="text-wrapper-2">NFTs</div>
-                    {/* </Link> */}
+                    <Link href='/AllNFT'>
+                        <div className="text-wrapper-2">NFTs</div>
+                    </Link>
                     <div className="search-bar">
                         <div className="inputBox_container">
                             <svg className="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" >
@@ -38,43 +42,53 @@ const NavBar = () => {
                         </div>
                     </div>
                     <div className="group">
-                        {/* <Link to='/explore'> */}
-                        <div className="text-wrapper-3">Explore
-                        </div>
-                        {/* </Link> */}
+                        <Link href='/explore' style={{ color: "white", textDecoration: "none" }}>
+                            Explore
+                        </Link>
 
                     </div>
-                    {/* <Link to='/messages'> */}
-                    <Image className="group-2" alt="Group" src={group} />
-                    {/* </Link> */}
-                    {/* <Link to='/drops'> */}
-                    <div className="text-wrapper-4">Drops</div>
-                    {/* </Link> */}
+                    <Link href='/selfash'>
+                        <Image className="group-2" alt="Group" src={group} />
+                    </Link>
+                    <Link href='/drops'>
+                        <div className="text-wrapper-4">Drops</div>
+                    </Link>
                     <div className="group-3">
 
                         <div>
                             <details className="text-wrapper-3">
                                 <ul>
-                                    {/* <Link style={{ textDecoration: 'none', color: 'white' }} to='/stats'> */}
-                                    <li><a href="#" className="Dtext-wrapper">Stats</a></li>
-                                    {/* </Link> */}
-                                    {/* <Link style={{ textDecoration: 'none', color: 'white' }} to='/about'> */}
-                                    <li><a href="#" className="Dtext-wrapper-2">About Us</a></li>
-                                    {/* </Link> */}
-                                    {/* <Link style={{ textDecoration: 'none', color: 'white' }} to='/studio'> */}
-                                    <li><a href="#" className="Dtext-wrapper-4">Creator Studio</a></li>
-                                    {/* </Link> */}
-                                    {/* <Link style={{ textDecoration: 'none', color: 'white' }} to='/edit'> */}
-                                    <li><a href="#" className="Dtext-wrapper-5">Edit Profile</a></li>
-                                    {/* </Link> */}
-
+                                    <Link style={{ textDecoration: 'none', color: 'white' }} href='/Stats'>
+                                        <li>Stats</li>
+                                    </Link>
+                                    <Link style={{ textDecoration: 'none', color: 'white' }} href='/About'>
+                                        <li>About Us</li>
+                                    </Link>
+                                    <Link style={{ textDecoration: 'none', color: 'white' }} href='/brandPage'>
+                                        <li>BrandPage</li>
+                                    </Link>
+                                    <Link style={{ textDecoration: 'none', color: 'white' }} href='/edit'>
+                                        <li>Edit Profile</li>
+                                    </Link>
                                 </ul>
                             </details>
                         </div>
                     </div>
-                    <div className="frame">
-                        <div className="text-wrapper-5">Wallet</div>
-                    </div>
+                    {
+                        localStorage.getItem('token') ? <div 
+                        onClick={()=>{dispatch(logout());router.push('/signIn');}}
+                        className="text-wrapper-5">Logout</div> :
+                            <div className="frame" style={{ display: "flex", gap: "1rem" }}>
+                                <div className="text-wrapper-5"
+                                onClick={()=>router.push("/signUp")}
+                                >SignUp</div>
+                                <div 
+                                onClick={()=>router.push("/signIn")}
+                                
+                                className="text-wrapper-5">SignIn</div>
+                            </div>
+                    }
+
                 </div>
             </div>
         </div>
