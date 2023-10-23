@@ -38,7 +38,7 @@ const Stats = () => {
                 <div className="line-6"></div>
                 <div className="group">
                   <div className="group-2">
-                    {/* <Image className="photo" width = "5px"alt="Photo" src="photo-1.png" /> */}
+                    <img className="photo" width = {10} height = {20} alt="Photo" src="photo-1.png" />
                     <div className="text-wrapper-11">Adidas</div>
                     <div className="overlap-group-wrapper">
                       <div className="overlap-group-2">
@@ -69,21 +69,21 @@ const Stats = () => {
                 <div className="group-5">
                   <div className="line-6"></div>
                   <div className="group-6">
-                    <Image className="photo" alt="Photo" src={asset1} />
+                    <img className="photo" alt="Photo" src={asset1} />
                     <div className="text-wrapper-11">Nike</div>
                     <div className="div-wrapper">
                       <div className="overlap-group-2">
                         <div className="ellipse" />
-                        <Image className="vector" alt="Vector" src={asset3} />
+                        <img className="vector" alt="Vector" src={asset3} />
                       </div>
                     </div>
                   </div>
                   <div className="group-3">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">27,966.76</div>
                   </div>
                   <div className="group-4">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">12.99</div>
                   </div>
                   <div className="text-wrapper-13">5.9K</div>
@@ -95,21 +95,21 @@ const Stats = () => {
 
                 <div className="group-7">
                   <div className="group-8">
-                    <Image className="photo" alt="Photo" src="photo-1-2.png" />
+                    <img className="photo" alt="Photo" src="photo-1-2.png" />
                     <div className="text-wrapper-11">Lacoste</div>
                     <div className="group-9">
                       <div className="overlap-group-2">
                         <div className="ellipse" />
-                        <Image className="vector" alt="Vector" src={asset3} />
+                        <img className="vector" alt="Vector" src={asset3} />
                       </div>
                     </div>
                   </div>
                   <div className="group-3">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">27,966.76</div>
                   </div>
                   <div className="group-4">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">12.99</div>
                   </div>
                   <div className="text-wrapper-13">5.9K</div>
@@ -121,21 +121,21 @@ const Stats = () => {
                   <div className="line-6"></div>
 
                   <div className="group-11">
-                    <Image className="photo" alt="Photo" src="photo-1-3.png" />
+                    <img className="photo" alt="Photo" src="photo-1-3.png" />
                     <div className="text-wrapper-11">Zalando</div>
                     <div className="group-12">
                       <div className="overlap-group-2">
                         <div className="ellipse" />
-                        <Image className="vector" alt="Vector" src={asset3} />
+                        <img className="vector" alt="Vector" src={asset3} />
                       </div>
                     </div>
                   </div>
                   <div className="group-3">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">27,966.76</div>
                   </div>
                   <div className="group-4">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">12.99</div>
                   </div>
                   <div className="text-wrapper-13">5.9K</div>
@@ -147,21 +147,21 @@ const Stats = () => {
                   <div className="line-6"></div>
 
                   <div className="group-14">
-                    <Image className="photo" alt="Photo" src="photo-1-4.png" />
+                    <img className="photo" alt="Photo" src="photo-1-4.png" />
                     <div className="text-wrapper-11">Zara</div>
                     <div className="group-15">
                       <div className="overlap-group-2">
                         <div className="ellipse" />
-                        <Image className="vector" alt="Vector" src={asset3} />
+                        <img className="vector" alt="Vector" src={asset3} />
                       </div>
                     </div>
                   </div>
                   <div className="group-3">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">27,966.76</div>
                   </div>
                   <div className="group-4">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">12.99</div>
                   </div>
                   <div className="text-wrapper-13">5.9K</div>
@@ -173,21 +173,21 @@ const Stats = () => {
                   <div className="line-6"></div>
 
                   <div className="group-17">
-                    <Image className="photo" alt="Photo" src="photo-1-5.png" />
+                    <img className="photo" alt="Photo" src="photo-1-5.png" />
                     <div className="text-wrapper-11">Cartier</div>
                     <div className="group-18">
                       <div className="overlap-group-2">
                         <div className="ellipse" />
-                        <Image className="vector" alt="Vector" src={asset3} />
+                        <img className="vector" alt="Vector" src={asset3} />
                       </div>
                     </div>
                   </div>
                   <div className="group-3">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">27,966.76</div>
                   </div>
                   <div className="group-4">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">12.99</div>
                   </div>
                   <div className="text-wrapper-13">5.9K</div>
@@ -199,21 +199,21 @@ const Stats = () => {
                   <div className="line-6"></div>
 
                   <div className="group-8">
-                    <Image className="photo" alt="Photo" src="photo-1-6.png" />
+                    <img className="photo" alt="Photo" src="photo-1-6.png" />
                     <div className="text-wrapper-11">Hermes</div>
                     <div className="group-20">
                       <div className="overlap-group-2">
                         <div className="ellipse" />
-                        <Image className="vector" alt="Vector" src={asset2} />
+                        <img className="vector" alt="Vector" src={asset2} />
                       </div>
                     </div>
                   </div>
                   <div className="group-3">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">27,966.76</div>
                   </div>
                   <div className="group-4">
-                    <Image className="vector-2" alt="Vector" src={asset} />
+                    <img className="vector-2" alt="Vector" src={asset} />
                     <div className="text-wrapper-12">12.99</div>
                   </div>
                   <div className="text-wrapper-13">5.9K</div>
@@ -232,43 +232,43 @@ const Stats = () => {
                 </div>
               </div>
               <div className="group-22">
-                <Image className="line-7" alt="Line" src="line-372.svg" />
-                <Image className="line-8" alt="Line" src="line-373.svg" />
-                <Image className="line-9" alt="Line" src="line-374.svg" />
-                <Image className="line-10" alt="Line" src="line-375.svg" />
-                <Image className="line-11" alt="Line" src="line-376.svg" />
-                <Image className="line-12" alt="Line" src="line-377.svg" />
+                <img className="line-7" alt="Line" src="line-372.svg" />
+                <img className="line-8" alt="Line" src="line-373.svg" />
+                <img className="line-9" alt="Line" src="line-374.svg" />
+                <img className="line-10" alt="Line" src="line-375.svg" />
+                <img className="line-11" alt="Line" src="line-376.svg" />
+                <img className="line-12" alt="Line" src="line-377.svg" />
               </div>
-              <Image className="group-23" alt="Group" src={asset2} />
-                        <Image className="vector-3" alt="Vector" src={asset1} />
-                        <Image className="vector-4" alt="Vector" src={asset1}/>
-                        <Image className="vector-5" alt="Vector" src={asset1} />
+              <img className="group-23" alt="Group" src={asset2} />
+                        <img className="vector-3" alt="Vector" src={asset1} />
+                        <img className="vector-4" alt="Vector" src={asset1}/>
+                        <img className="vector-5" alt="Vector" src={asset1} />
             </div>
             <div className="frame-2">
               <div className="group-24">
                 <div className="overlap-group-3">
                   <div className="text-wrapper-24">Last 7 Days</div>
-                  <Image className="vector-6" alt="Vector" src="vector-21.svg" />
+                  <img className="vector-6" alt="Vector" src="vector-21.svg" />
                 </div>
               </div>
               <div className="group-25">
                 <div className="overlap-group-3">
                   <div className="text-wrapper-24">All Categories</div>
-                  <Image className="vector-6" alt="Vector" src="vector-22.svg" />
+                  <img className="vector-6" alt="Vector" src="vector-22.svg" />
                 </div>
               </div>
             </div>
             <div className="frame-3">
               <div className="frame-4">
-                <Image className="vector-7" alt="Vector" src="vector-23.svg" />
+                <img className="vector-7" alt="Vector" src="vector-23.svg" />
                 <div className="text-wrapper-25">1 - 100</div>
               </div>
               <div className="frame-4">
                 <div className="text-wrapper-26">101 - 200</div>
-                <Image className="vector-8" alt="Vector" src="vector-24.svg" />
+                <img className="vector-8" alt="Vector" src="vector-24.svg" />
               </div>
             </div>
-            <Image className="line-13" alt="Line" src="line-378.svg" />
+            <img className="line-13" alt="Line" src="line-378.svg" />
 
             <div className="frame-6">
               <div className="text-wrapper-33">Marketplace Perfomence</div>
